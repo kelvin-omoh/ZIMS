@@ -1,0 +1,65 @@
+import React, { useEffect, useState } from 'react';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+
+const Navbar = () => {
+
+  const [nav, setNav] = useState(false);
+  const handleNav = () => {
+    setNav(!nav)
+  }
+  
+  const [scroll,setScroll]=useState(0)
+const handleScroll=()=>{
+const scrollY= window.pageXOffset || document.documentElement.scrollTop;
+setScroll(scrollY)
+}
+useEffect(()=>{
+window.addEventListener('scroll',handleScroll)
+return ()=>{
+  window.removeEventListener('scroll',handleScroll)
+}
+},[])
+const shouldChange=scroll > 10
+
+  return (
+    <div className={`w-full fixed top-0 h-[90px] z-30  ${shouldChange ? 'bg-black' : 'bg-[#00000018]'} `}>
+      <div className='max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full '>
+        <div>
+          <h1 className='text-white'>ZIMS</h1>
+        </div>
+        <div className='hidden md:flex'>
+          <ul className='flex  text-white items-center'>
+            <li className='p-4'><Link to='/'>Home</Link></li>
+            <li className='p-4'><Link to='/animals'>Animals</Link></li>
+            <li className='p-4'><Link to='/about'>Abouts</Link></li>
+            <li className='p-4'><Link to='/contact'>Contact Us</Link></li>
+            <button className='ml-4 py-[10px] px-7'><Link to='/tickets'>Tickets</Link></button>
+          </ul>
+        </div>
+
+        {/* Hamburger Menu */}
+        <div onClick={handleNav} className='block md:hidden'>
+          {nav ? <AiOutlineClose size={30} className='text-white' /> : <AiOutlineMenu size={30} className='text-white' />}
+
+        </div>
+
+        {/* Mobile menu */}
+        <div className={nav ? 'w-full bg-black text-white absolute top-[90px] left-0 flex justify-center text-center' : 'absolute left-[-100%]'}>
+          <ul>
+          <li className='text-xl p-4'><Link to='/'>Home</Link></li>
+            <li className='text-xl p-4'><Link to='/animals'>Animals</Link></li>
+            <li className='text-xl p-4'><Link to='/about'>Abouts</Link></li>
+            <li className='text-xl p-4'><Link to='/contact'>Contact Us</Link></li>
+            <button className='m-8'><Link to='/tickets'>Tickets</Link></button>
+
+          </ul>
+        </div>
+        
+      </div>
+
+    </div>
+  )
+}
+
+export default Navbar
