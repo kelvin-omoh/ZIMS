@@ -23,9 +23,9 @@ return ()=>{
 const shouldChange=scroll > 10
 
   return (
-    <div className={`w-full fixed top-0 h-[90px] z-30  ${shouldChange ? 'bg-black' : 'bg-[#00000018]'} `}>
-      <div className='max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full '>
-        <div>
+    <div className={` w-[100vw] md:w-full fixed top-0 h-[90px] z-30  ${shouldChange ? 'bg-black' : 'bg-[#00000018]'} `}>
+      <div className='max-w-[1240px] md:mx-auto mx-3  flex justify-between items-center h-full '>
+        <div >
           <h1 className='text-white'>ZIMS</h1>
         </div>
         <div className='hidden md:flex'>

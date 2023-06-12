@@ -10,7 +10,7 @@ const About = () => {
   return (
     <div>
         <Navbar/>
-        <HeroImage heading='About Us'/>
+        <HeroImage heading={'About Us'}/>
         <Abouts/>
         <Testimonial/>
         <Adventure/>

@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import ABoutImg from '../assets/aboutImg.png'
+import ZOO from '../assets/zoologicalgardens.jpg'
 import { Link } from "react-router-dom";
 // import Typed from "react-typed";
 
 const Hero = () => {
   return (
-    <div className="bg-black bg-opacity-50 w-full h-[90vh] top-[90px]">
+    <div className="bg-black bg-opacity-70 w-full h-[600px] md:h-[90vh] top-[90px]">
       <img
-        className=" object-cover h-[90vh] w-full absolute -z-10"
-        src={ABoutImg}
+        className=" object-cover h-[600px] md:h-[90vh] w-full absolute -z-10"
+        src={ZOO}
         alt="/"
       />
-      <div className="max-w-[1400px] mx-auto  w-full h-[90%] flex flex-col justify-center  text-white px-4 ">
+      <div className="max-w-[1400px] mx-auto  w-full h-[90%] flex flex-col justify-center   text-white px-4 ">
         <p className="font-cold text-2xl">Its Time to </p>
         <h1 className=" text-orange-500 font-bold text-5xl md:text-7xl drop-shadow-2xl">
           Get Wild
@@ -22,9 +23,9 @@ const Hero = () => {
           country as you encounter majestic lions, elegant elephants,graceful
           giraffes,and more
         </p>
-        <div>
-              <button className="text-white m-2 bg-[#3CCF4E]"><Link to='tickets'>Regular Ticket</Link></button>
-               <button className="text-white m-2"><Link to='/tickets'>VIP Tickets</Link></button>
+        <div className="flex">
+              <button className=" text-sm md:text-lg text-white m-2 bg-[#3CCF4E]"><Link to='/tickets'>Normal Ticket</Link></button>
+               <button className="text-sm md:text-lg text-white m-2"><Link to='/tickets'>Foreigner Tickets</Link></button>
             </div>
       </div>
     </div>

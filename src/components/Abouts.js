@@ -4,7 +4,7 @@ const Abouts = () => {
   return (
     <div className="max-w-[1240px] mx-auto py-11 px-4 ">
       <div className="flex justify-center">
-        <div className="w-[1000px] h-[130px] bg-[#F0EDD4] rounded-2xl py-11 px-9  text-center">
+        <div className="w-[1000px]  h-fit md:h-[130px] bg-[#F0EDD4] rounded-2xl py-11 px-9  text-center">
           <p className="font-semibold text-sm md:text-lg">
             Our mission is to promote conservation and preservation through
             memorable and educational encounters with African Wildlife in a

@@ -8,7 +8,7 @@ const Tickets = () => {
   const handleOnClose = () => setModal(false);
 
   return (
-    <div className="max-w-[1240px] mx-auto py-28 px-4 grid grid-cols-1 md:grid-cols-2 gap-4 ">
+    <div className="max-w-[1240px] mx-auto mt-11 py-4 px-4 grid grid-cols-1 md:grid-cols-2 gap-4 ">
       <div>
         <h1>
           <span className="italic text-[#3CCF4E]">General</span> Admission

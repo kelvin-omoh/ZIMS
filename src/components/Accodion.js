@@ -34,8 +34,8 @@ const Accodion = () => {
   return (
     <div className="max-w-[1240px] mx-auto mt-11 py-4 p-4">
       <div className="text-center ">
-        <h1>Frequently Asked Questions</h1>
-        <p className="pt-3 text-xl">click on the question to expand the answer</p>
+        <h1 className="text-2xl md:text-5xl">Frequently Asked Questions</h1>
+        <p className="pt-3 text-lg">click on the question to expand the answer</p>
       </div>
 
       <div className=" mt- flex justify-center items-center">

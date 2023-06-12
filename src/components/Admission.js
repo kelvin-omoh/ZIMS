@@ -10,7 +10,7 @@ const Admission = () => {
           src="https://images.unsplash.com/photo-1503919005314-30d93d07d823?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsayUyMHRocnUlMjBpbiUyMGElMjB6b298ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
           alt="/"
         />
-        <div className=" w-[570px] h-full grid grid-cols-2 gap-4 py-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-5">
           <div>
             <img  className="rounded-xl" src="https://images.unsplash.com/photo-1610429196503-bd6a44252ba2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZHJpdmUlMjB0aHJ1fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" />
           </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ZOO from '../assets/zoologicalgardens.jpg'
 
 const Mission = () => {
   return (
@@ -8,7 +9,8 @@ const Mission = () => {
       <div>
         <img
           className="w-full h-[450px] object-cover rounded-xl"
-          src="https://media.istockphoto.com/id/531467588/photo/black-jaguar-walking-towards-viewer.jpg?s=612x612&w=0&k=20&c=dPEqSbFF3TyroEoxxb4-1S6CAr9Qw8VBrdpwbyDLeE8="
+          src={ZOO}
+          // src="https://media.istockphoto.com/id/531467588/photo/black-jaguar-walking-towards-viewer.jpg?s=612x612&w=0&k=20&c=dPEqSbFF3TyroEoxxb4-1S6CAr9Qw8VBrdpwbyDLeE8="
           alt="/"
         />
       </div>

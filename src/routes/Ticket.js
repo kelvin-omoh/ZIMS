@@ -10,9 +10,9 @@ const Ticket = () => {
   return (
     <div>
         <Navbar/>
-        <HeroImage/>
+        <HeroImage heading='Tickets'/>
         <Tickets/>
-        {/* <Admission/>  */}
+        <Admission/> 
         <Footer />
 
     </div>

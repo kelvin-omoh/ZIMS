@@ -17,7 +17,7 @@ const AdminLogin = () => {
                 <label>Password</label>
                 <input className='border relative bg-gray-100 p-2' type='password'></input>
             </div>
-            <button className='w-full py-3 mt-3 bg-indigo-600 hover:bg-indigi-500 relative text-white'>Sign In</button>
+            <button className='w-full py-3 mt-3 bg-indigo-600 hover:bg-indigo-500 relative text-white'>Sign In</button>
             <p className='flex items-center mt-2'><input type='checkbox'/>Remember Me</p>
             <p className='text-center mt-8'>Not an Admin? Sign up now</p>
      </form>

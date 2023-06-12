@@ -12,7 +12,7 @@ const Plan = () => {
   return (
     <div>
       <Navbar />
-      <HeroImage />
+      <HeroImage  heading='Plan Adeventure'/>
       <PlanAdeventure />
       <GeneralAdmission />
       <Directions />

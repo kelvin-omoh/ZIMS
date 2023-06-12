@@ -6,7 +6,7 @@ import { TiSocialPinterest } from "react-icons/ti";
 const Footer = () => {
   return (
     <div className="w-full mt-5 bg-black  text-gray-100 py-2 px-4">
-      <div className="flex  flex-col md:flex-row justify-between mx-[10%] gap-[1em] md:gap-[14em]   border-b-2 border-gray-600 py-8 px-4">
+      <div className="flex  flex-col md:flex-row justify-between mx-[0] md:mx-[10%] gap-[1em] md:gap-[14em]   border-b-2 border-gray-600 py-8 px-4">
         <div className=" flex flex-row w-[90%] gap-[2em] md:flex-row md:w-full  justify-between">
         <div>
           <h6 className="font-bold   uppercare pt-8">
