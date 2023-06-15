@@ -12,14 +12,14 @@ const Rules = () => {
         </div>
       </div>
         <div className='pt-11 w-full'>
-            <h1 className='pb-2 text-2xl md:text-4xl'>General Rules</h1>
+            <h1 className='pb-2 text-xl md:text-4xl'>General Rules</h1>
             <li className='pl-4 py-1'>No smoking on the premises.</li>
             <li className='pl-4 py-1'>Feeding or touching our animals is strictly prohibited..</li>
             <li className='pl-4 py-1'>No re-entry after exiting the park.</li>
             <li className='pl-4 py-1'>This facility is under constant video surveillance.</li>
         </div>
         <div className='py-7'>
-            <h1 className='pb-2 text-2xl md:text-4xl'>Drive-Thru Guidlines</h1>
+            <h1 className='pb-2 text-xl md:text-4xl'>Drive-Thru Guidlines</h1>
             <li className='pl-4 py-1'> Enter at your own risk. UI-ZIMS is NOT responsible for any damages.</li>
             <li className='pl-4 py-1'>Windows up, doors closed, and stay in your vehicle.</li>
             <li className='pl-4 py-1'>The speed limit is 15mph.</li>
@@ -34,18 +34,18 @@ const Rules = () => {
         </div>
        
         <div className='py-7'>
-            <h1 className='pb-2 text-2xl md:text-4xl'>Pet Guidlines</h1>
+            <h1 className='pb-2 text-xl md:text-4xl'>Pet Guidlines</h1>
             <li className='pl-4 py-1'>Visitors can travel through the drive-thru portion of our park with domestic pets enclosed in their vehicles with the windows up.</li>
             <li className='pl-4 py-1'>In the walk-thru area, leashed domestic pets and service animals can be walked in the parking lot, but may not enter the walk-thru portion of the park.</li>
             <li className='pl-4 py-1'>Pet owners are expected to clean up after their animals and are completely liable for their behavior.</li>
         </div>
         <div className='py-7'>
-            <h1 className='pb-2 text-2xl md:text-4xl'>Handicapped Accessible</h1>
+            <h1 className='pb-2 text-xl md:text-4xl'>Handicapped Accessible</h1>
             <li className='pl-4 py-1'>UI-ZIMS is fully accessible for those with mobility challenges.
              Wheelchairs are available upon request in UI Zoo on a first come first serve basis.</li>
         </div>
         <div className='py-7'>
-            <h1 className='pb-2 text-2xl md:text-4xl'>Food/Drink Restrictions</h1>
+            <h1 className='pb-2 text-xl md:text-4xl'>Food/Drink Restrictions</h1>
             <li className='pl-4 py-1'>UI-ZIMS allows guests to bring in a picnic lunch in our designated picnic
              areas or any grassy area. We ask that you leave the umbrella tables for those
              purchasing food or beverages from the ZIMS Grille. No alcohol may be brought onto the premises.</li>
