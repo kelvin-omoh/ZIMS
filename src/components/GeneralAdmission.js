@@ -3,7 +3,7 @@
 
     const GeneralAdmission = () => {
     return (
-        <div className='bg-zinc-100 py-9 mt-20'>
+        <div className='bg-zinc-100 py-9 mt-10'>
         <div className="max-w-[1240px]  mx-auto py-9 px-4 grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
         <h1>

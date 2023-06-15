@@ -4,7 +4,7 @@ import ZOO from '../assets/zoologicalgardens.jpg'
 
 const Mission = () => {
   return (
-    <div className="max-w-[1240px] mx-auto mt-[100px] pb-11 px-4 grid lg:grid-cols-2 gap-4">
+    <div className="max-w-[1240px] mx-auto mt-[50px] md:mt-[80px] pb-11 px-4 grid lg:grid-cols-2 gap-4">
       {/* Left side */}
       <div>
         <img

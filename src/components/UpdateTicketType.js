@@ -2,7 +2,7 @@ import React from 'react'
 
 const UpdateTicketType = () => {
   return (
-    <div className='absolute left-[13.5%] w-[81%] mt-40 ml-11 p-8 bg-zinc-100 -z-10'>
+    <div className='absolute left-[13.5%] w-[81%] mt-40 ml-11 p-8 bg-zinc-100 z-[10]'>
       <h3 className="font-bold text-xl">Update Ticket Type</h3>
         <div className='w-full py-3'>
         <form className='flex flex-col '>

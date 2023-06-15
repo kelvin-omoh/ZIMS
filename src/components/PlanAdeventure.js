@@ -4,7 +4,7 @@ import Tickets from "./Tickets";
 
 const PlanAdeventure = () => {
   return (
-    <div className="max-w-[1240px] mt-20 mx-auto py-4 px-4">
+    <div className="max-w-[1240px] mt-10 mx-auto py-4 px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="bg-orange-200 py-9 px-8 rounded-xl ">
           <h3 className="font-bold text-2xl mb-4">General Guidlines</h3>

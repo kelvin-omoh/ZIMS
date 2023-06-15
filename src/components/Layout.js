@@ -1,19 +1,36 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RxDashboard } from "react-icons/rx";
 import { HiOutlineDocument } from "react-icons/hi";
 import { BsChevronBarDown, BsChevronDown, BsFillTicketDetailedFill } from "react-icons/bs";
 import { GoReport } from "react-icons/go";
+import { UserAuth } from "../Context/AuthContext";
 // import{RiArrowDropDownLine} from 'react-icons/ri'
 // import{BiSolidReport} from 'react-icons/bi'
 
 const Layout = () => {
   const [showSelect, setShowSelect] = useState(true);
   const [currentText,setCurrentText]=useState("Animal Detail")
-  const changeText=(text)=>{
+  const changeText=(text) => {
   // setCurrentText(text)
   }
+
+  const {logout} = UserAuth();
+  const navigate = useNavigate();
+   
+  const handleLogout = async () => {
+      try {
+            await logout();
+            navigate('/signin');
+            // alert('logged out')
+      }catch (e) {
+        alert(e.message);
+      }
+
+  };
+
+
   return (
     <div className=" flex  fixed h-full w-full">
       <div className="bg-[#120A22] text-white w-[213px] relative list-none flex p-5 flex-col h-screen ">
@@ -38,12 +55,12 @@ const Layout = () => {
             
           > 
             <li className="flex justify-start items-start  gap-3 ">
-            <HiOutlineDocument size={20} />
-              <ul  className=" w-full flex flex-col gap-4 text-[.8em]">
+            <HiOutlineDocument className="flex items-center" size={25} />
+              <ul  className=" w-full flex flex-col items-center gap-4 text-[.9em]">
                 
                
                 <li className={` ${showSelect ? "block" :'hidden'}`}   onClick={() => setShowSelect(!showSelect)}>{currentText}</li>
-                <li className={`block ${showSelect &&'hidden'}`}   onClick={() => changeText("1 DETAIL")}>1 Details</li>
+                <Link to='/edit'><li className={`block ${showSelect &&'hidden'}`}   onClick={() => changeText("1 DETAIL")}>Edit</li></Link>
                 <li className={`block ${showSelect &&'hidden'}`}   onClick={() => changeText("2 DETAIL")}>2 Details</li>
                 <li className={`block ${showSelect &&'hidden'}`}   onClick={() => changeText("3 DETAIL")}>3 Details</li>
                
@@ -96,7 +113,7 @@ const Layout = () => {
           </Link>
 
           <li className=" bottom-[2em] cursor-pointer w-full absolute ">
-            <button className=" bg-indigo-700 justify-center flex  items-center w-[70%]">
+            <button onClick={handleLogout} className=" bg-indigo-700 justify-center flex  items-center w-[70%]">
               Logout
             </button>
           </li>

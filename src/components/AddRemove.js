@@ -1,12 +1,19 @@
 import React from "react";
 import UpdateAnimal from "./UpdateAnimal";
+import Layout from "./Layout";
+import NavDashboard from "./NavDashboard";
 
 const AddRemove = () => {
   const handleUpdate = {};
 
   return (
-    <div className=" py-9 px-9">
-      <div className="relative w-full flex flex-col mb-6">
+  
+    
+    <div className=" ">
+        <Layout/>
+        <NavDashboard />
+        <div className="absolute left-[13.5%] w-[81%] mt-40 ml-11 p-8 bg-zinc-100 z-[10]">
+      <div className="relative w-full flex flex-col mb-6 z-[-1]">
         <div className="block bg-transparent w-full overflow-x-auto">
           <h3 className="font-bold py-3 text-xl">Manage Animals</h3>
 
@@ -106,6 +113,7 @@ const AddRemove = () => {
             </tbody>
           </table>
         </div>
+      </div>
       </div>
       {/* <UpdateAnimal/> */}
     </div>

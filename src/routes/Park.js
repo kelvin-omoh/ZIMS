@@ -8,7 +8,7 @@ const Park = () => {
   return (
     <div>
         <Navbar/>
-        <HeroImage/>
+        <HeroImage heading='Park Rules'/>
         <Rules/>
         <Footer/>
 

@@ -2,7 +2,7 @@ import React from "react";
 
 const Lodge = () => {
   return (
-    <div className="max-w-[1240px] mt-20 mx-auto py-9 px-4 ">
+    <div className="max-w-[1240px] mx-auto py-4 px-4 ">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Left side */}
         <div>

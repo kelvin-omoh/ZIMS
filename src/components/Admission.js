@@ -22,7 +22,7 @@ const Admission = () => {
       </div>
       <div className="ml-11">
         {" "}
-        <h1>
+        <h1 className="text-3xl md:text-4xl">
           <span className="italic text-[#3CCF4E]">General</span> Admission
         </h1>
         <p className="py-3 text-[1.1rem]">
