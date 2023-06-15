@@ -24,8 +24,8 @@ const Hero = () => {
           giraffes,and more
         </p>
         <div className="flex">
-              <button className=" text-white m-2 bg-[#3CCF4E]"><Link to='/tickets'>Normal Ticket</Link></button>
-               <button className=" text-white m-2"><Link to='/tickets'>Foreigner Tickets</Link></button>
+              <button className=" text-white m-2 bg-[#3CCF4E]"><Link to='/tickets'>Normal</Link></button>
+               <button className=" text-white m-2"><Link to='/tickets'>Foreigner</Link></button>
             </div>
       </div>
     </div>
