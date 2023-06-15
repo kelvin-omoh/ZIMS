@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="bg-black bg-opacity-70 w-full h-[500px] md:h-[100vh] top-[90px]">
+    <div className="bg-black bg-opacity-70 w-full h-[90vh] top-[90px]">
       <img
-        className=" object-cover h-[500px] md:h-[100vh] w-full absolute -z-10"
+        className=" object-cover h-[90vh] w-full absolute -z-10"
         src={ZOO}
         alt="/"
       />
