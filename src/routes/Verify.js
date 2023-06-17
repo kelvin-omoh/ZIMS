@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 
 const Verify = () => {
   return (
-    <div className="max-w-[700px] mx-auto py-16 px-4 mt-10">
+    <div className="bg-black/80 w-full h-screen flex items-center">
+    <div className="max-w-[700px] mx-auto py-16 px-4 ">
       <div className="bg-white shadow-2xl p-5 h-[400px] w-full grid grid-cols-2 gap-4">
         {/* Left side */}
         <div className="flex flex-col border border-zinc-400 text-center rounded-2xl py-12 px-8">
@@ -41,6 +42,7 @@ const Verify = () => {
           </Link>
         </div>
       </div>
+    </div>
     </div>
   );
 };

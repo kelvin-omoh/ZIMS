@@ -19,7 +19,7 @@ const SupervisorLayout = () => {
   const handleLogout = async () => {
       try {
             await logout();
-            navigate('/signin');
+            navigate('/verify');
             // alert('logged out')
       }catch (e) {
         alert(e.message);

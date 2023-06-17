@@ -1,33 +1,52 @@
+ import Babbon from '../assets/baboon.jpg'
+ import Giraffe from  '../assets/giraffe2.jpg'
+ import NewLion from '../assets/NewLion.jpg'
+ import Crocodile from '../assets/crocodile.jpg'
+ import Lioness from '../assets/lioness.jpg'
+ import Hyena from  '../assets/hyena.jpg'
+ import Eland from '../assets/eland.jpg'
  const  Data = [
     {
         id: 1,
-        img: 'https://media.istockphoto.com/id/1283550298/photo/sea-otter-on-ice-enhydra-lutris-prince-william-sound-alaska-in-front-of-surprise-glacier.jpg?s=612x612&w=0&k=20&c=7RmeFq5ATv4epJt4v7XaT1U-pP7KlOVayjV_6M6CxS4='
+        src:Babbon,
+        alt:'babbon',
+        name:'Babbon'
     },
     {
         id: 2,
-        img: 'https://media.istockphoto.com/id/531467588/photo/black-jaguar-walking-towards-viewer.jpg?s=612x612&w=0&k=20&c=dPEqSbFF3TyroEoxxb4-1S6CAr9Qw8VBrdpwbyDLeE8='
-    },
+        src:Giraffe,
+        alt:'giraffe',
+        name:'Giraffe'
+    },   
     {
         id: 3,
-        img: 'https://media.istockphoto.com/id/172165510/photo/pronghorn-antelope.jpg?s=612x612&w=0&k=20&c=2eDMvdD7Ir2rQwUwB-vUtfTk5GvV-qyyifGXIzOHdjY='
+        src:NewLion,
+        alt:'lion',
+        name:'Lion'
     },
     {
-        id: 4,
-        
-        img: 'https://images.pexels.com/photos/3284299/pexels-photo-3284299.jpeg?auto=compress&cs=tinysrgb&w=600'
-    
+        id: 4, 
+        src:Crocodile,
+        alt:'crocodile',
+        name:'Crocodile'
     },
     {
         id: 5,
-        img: 'https://media.istockphoto.com/id/1361427581/photo/a-chimpanzee-family-mahale-mountain-national-park-tanzania.jpg?s=612x612&w=0&k=20&c=EvXMoj1pg2pT9p20mDN_t6iZ6I2bQpe0caqff3dur9M='
+        src:Lioness,
+        alt:'lioness',
+        name:'Lioness'
     },
     {
         id: 6,
-        img: 'https://media.istockphoto.com/id/1439347880/photo/the-reticulated-giraffe-also-known-as-the-somali-giraffe-samburu-national-reserve-kenya.jpg?s=612x612&w=0&k=20&c=xAu8bnDHpHWZcBA6L9cvPxOgLivKadiT6VkFutyNR3M='
+        src:Hyena,
+        alt:'hyena',
+        name:'Hyena'
     },
     {
         id: 7,
-        img: 'https://media.istockphoto.com/id/1366613253/photo/big-elephant-before-attack.jpg?s=612x612&w=0&k=20&c=R6VpuDikszBQzeexlhWDTCtfq7y5F-nvoirAv4GG14M='
+        src:Eland,
+        alt:'eland',
+        name:'Common Eland'
     },
     {
         id: 8,

@@ -24,7 +24,7 @@ const NavDashboard = () => {
   const handleLogout = async () => {
       try {
             await logout();
-            navigate('/admin');
+            navigate('/verify');
             alert('logged out')
       }catch (e) {
         alert(e.message);
