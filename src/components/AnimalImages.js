@@ -7,7 +7,7 @@ const AnimalImages = () => {
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-[2rem] py-11">
         {Data.map((item) => (
           <>
-          <div className=" relative    w-full h-[20em] rounded-lg">
+          <div className=" relative  w-full h-[20em] rounded-lg">
 
              <img
             className="w-full h-full object-cover rounded-2xl   cursor-pointer hover:scale-105 ease-in-out duration-300"

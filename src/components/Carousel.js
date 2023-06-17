@@ -43,11 +43,18 @@ const Carousel = () => {
           className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
         >
           {Data.map((item) => (
+            <>
+            <div className="inline-block relative">
             <img
               className="w-[350px] h-[450px] object-cover inline-block p-4 rounded-3xl cursor-pointer hover:scale-110 ease-in-out duration-300"
-              src={item.img}
+              src={item.src}
               alt="/"
             />
+             <p className=" p-4   top-[80%] w-full rounded-b-2xl  absolute text-[1.4em]  text-[#fcf7f7]  font-bold
+           text-center">{item.name}</p>
+            
+            </div>
+         </>
           ))}
         </div>
       </div>
