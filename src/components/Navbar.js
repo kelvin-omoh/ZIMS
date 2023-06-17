@@ -53,9 +53,9 @@ const shouldChange=scroll > 10
             <li className='text-xl p-4'><Link to='/animals'>Animals</Link></li>
             <li className='text-xl p-4'><Link to='/about'>Abouts</Link></li>
             <li className='text-xl p-4'><Link to='/contact'>Contact Us</Link></li>
-            <div className='flex flex-col gap-3'>
-            <button className='py-5 bg-white text-black'><Link to='/tickets'>Login</Link></button>
-            <button className='py-5 bg-indi'><Link to='/tickets'>Sign Up</Link></button>
+            <div className='flex flex-col gap-3 mb-5'>
+            <button className=' bg-white text-black'><Link to='/tickets'>Login</Link></button>
+            <button className=' bg-indigo-800'><Link to='/tickets'>Sign Up</Link></button>
             </div>
             
 
