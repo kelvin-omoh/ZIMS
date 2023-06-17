@@ -18,21 +18,21 @@ const Carousel = () => {
     <div className="max-w-[1240px] mx-auto py-4 px-4">
       <div className="grid grid-cols-2 ">
         <div>
-          <h1 className="font-bold text-xl  md:text-5xl p-8">
+          <h1 className="font-bold  text-[1em] md:text-5xl p-1 ">
             Explore Our <span className="italic text-[#3CCF4E]">Animals</span>
           </h1>
         </div>
 
         <div className="flex justify-end items-center gap-2">
           <MdChevronLeft
-            className=" border border-black rounded-full opacity-50 cursor-pointer hover:opacity-100"
+            className=" border text-[2.5rem] md:text-[3rem] border-black rounded-full opacity-50 cursor-pointer hover:opacity-100"
             onClick={slideLeft}
-            size={50}
+            // size={50}
           />
           <MdChevronRight
-            className="border  border-black rounded-full opacity-50 cursor-pointer hover:opacity-100"
+            className="border text-[2.5rem] md:text-[3rem] border-black rounded-full opacity-50 cursor-pointer hover:opacity-100"
             onClick={slideRight}
-            size={50}
+            // size={50}
           />
         </div>
       </div>
