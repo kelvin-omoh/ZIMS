@@ -5,6 +5,17 @@
  import Lioness from '../assets/lioness.jpg'
  import Hyena from  '../assets/hyena.jpg'
  import Eland from '../assets/eland.jpg'
+ import Cobra from '../assets/cobra.jpg'
+ import Aligator from '../assets/aligator.jpg'
+ import Amiatina from '../assets/newanimal.jpg'
+ import Mallarduck from '../assets/mallardduck.jpg'
+ import Python from '../assets/python.jpg'
+ import Turtle from '../assets/turtle.jpg'
+ import Spurwingedgoose from '../assets/spurwingedgoose.jpg'
+ import Whitegeese from '../assets/whitegeese.jpg'
+ import CommonJackal from '../assets/commonJackil.jpg'
+ import Anaconda from  '../assets/Anaconda.jpg'
+
  const  Data = [
     {
         id: 1,
@@ -50,32 +61,65 @@
     },
     {
         id: 8,
-        img: 'https://media.istockphoto.com/id/486869012/photo/goat-looks-at-us.jpg?s=612x612&w=0&k=20&c=yeu3XUkLR2-mO2zwDGNaVL5o0DITA-deNXSKNaCX6bA='
+        src:Cobra,
+        alt:'cobra',
+        name:'Cobra'
     },
     {
         id: 9,
-        img: 'https://images.pexels.com/photos/6476618/pexels-photo-6476618.jpeg?auto=compress&cs=tinysrgb&w=600'
+        src:Aligator,
+        alt:'cobra',
+        name:'Alligator'
     },
     {
         id: 10,
-        img: 'https://media.istockphoto.com/id/1402707571/photo/turkey-in-the-grass-1.jpg?s=612x612&w=0&k=20&c=a6a5-SZtFLQLM1tmvOpFyAZaiutjrW28ZK4DwVBxLV8='
+        src:Amiatina,
+        alt:'amiatina',
+        name:'Amiatina Donkey'
     },
     {
         id: 11,
-        img: 'https://media.istockphoto.com/id/1402707571/photo/turkey-in-the-grass-1.jpg?s=612x612&w=0&k=20&c=a6a5-SZtFLQLM1tmvOpFyAZaiutjrW28ZK4DwVBxLV8='
+        src:Mallarduck,
+        alt:'mallarduck',
+        name:'Mallarduck'
     }, {
         id: 12,
-        img: 'https://media.istockphoto.com/id/1402707571/photo/turkey-in-the-grass-1.jpg?s=612x612&w=0&k=20&c=a6a5-SZtFLQLM1tmvOpFyAZaiutjrW28ZK4DwVBxLV8='
+        src:Python,
+        alt:'python',
+        name:'Python'
     }, {
         id: 13,
-        img: 'https://media.istockphoto.com/id/1402707571/photo/turkey-in-the-grass-1.jpg?s=612x612&w=0&k=20&c=a6a5-SZtFLQLM1tmvOpFyAZaiutjrW28ZK4DwVBxLV8='
+        src:Mallarduck,
+        alt:'mallarduck',
+        name:'Mallarduck'
     }, {
         id: 14,
-        img: 'https://media.istockphoto.com/id/1402707571/photo/turkey-in-the-grass-1.jpg?s=612x612&w=0&k=20&c=a6a5-SZtFLQLM1tmvOpFyAZaiutjrW28ZK4DwVBxLV8='
+       src:Turtle,
+        alt:'turtle',
+        name:'Turtle'
     },
     {
         id: 15,
-        img: 'https://media.istockphoto.com/id/1402707571/photo/turkey-in-the-grass-1.jpg?s=612x612&w=0&k=20&c=a6a5-SZtFLQLM1tmvOpFyAZaiutjrW28ZK4DwVBxLV8='
+        src:Spurwingedgoose,
+        alt:'spurwingedgoose',
+        name:'Spur  Winged Goose'
+    },
+    {
+        id: 16,
+        src:Whitegeese,
+        alt:'whitegeese',
+        name:'White Geese'
+    },
+    {
+        id: 17,
+        src:CommonJackal,
+        alt:'common jackal',
+        name:'Common Jackal'
+    },{
+        id: 18,
+        src:Anaconda,
+        alt:'Anaconda',
+        name:'Anaconda'
     }
 ];
 
