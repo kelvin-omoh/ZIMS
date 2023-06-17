@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import IFEOLUWA from "../assets/IFEOLUWA.jpg";
+import Profile from "../assets/profile.jpg";
 import { UserAuth } from "../Context/AuthContext";
 
 const SupervisorNav = () => {
@@ -45,7 +46,7 @@ const SupervisorNav = () => {
               ref={imgRef}
               onClick={() => setOpen(!open)}
               className="cursor-pointer rounded-full w-full h-full object-cover"
-              src={IFEOLUWA}
+              src={Profile}
             />
 
             {open && (

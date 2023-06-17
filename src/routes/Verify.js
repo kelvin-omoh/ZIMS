@@ -1,6 +1,7 @@
 import React from "react";
 import TAMA from "../assets/TAMA.jpg";
 import IFEOLUWA from "../assets/IFEOLUWA.jpg";
+import Profile from '../assets/profile.jpg'
 import { Link } from "react-router-dom";
 
 const Verify = () => {
@@ -14,7 +15,7 @@ const Verify = () => {
             <div className="inline-block rounded-full">
               <img
                 className="object-cover w-28 h-28 rounded-full self-center"
-                src={TAMA}
+                src={Profile}
                 type="/"
               />
             </div>
@@ -31,7 +32,7 @@ const Verify = () => {
             <div className="inline-block rounded-full">
               <img
                 className="object-cover w-28 h-28 rounded-full self-center"
-                src={IFEOLUWA}
+                src={Profile}
                 type="/"
               />
             </div>
