@@ -21,7 +21,7 @@
         id: 1,
         src:Babbon,
         alt:'babbon',
-        name:'Babbon'
+        name:'Babboon'
     },
     {
         id: 2,
