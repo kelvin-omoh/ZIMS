@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ZOO from '../assets/zoologicalgardens.jpg'
 
 const Experience = () => {
   return (
@@ -24,8 +25,9 @@ const Experience = () => {
         </div>
         <div>
           <img
-            className="object-cover rounded-lg"
-            src="https://images.unsplash.com/photo-1627981440910-552a0b1d7450?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d2FsayUyMHRocnUlMjBpbiUyMGElMjB6b298ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+            className="object-cover rounded-lg w-full h-[13rem]"
+            src={ZOO}
+            // src="https://images.unsplash.com/photo-1627981440910-552a0b1d7450?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d2FsayUyMHRocnUlMjBpbiUyMGElMjB6b298ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
             alt=""
           />
           <h3 className="font-bold text-xl py-2">Walk-Thru</h3>

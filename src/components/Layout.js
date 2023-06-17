@@ -22,7 +22,7 @@ const Layout = () => {
   const handleLogout = async () => {
       try {
             await logout();
-            navigate('/signin');
+            navigate('/verify');
             // alert('logged out')
       }catch (e) {
         alert(e.message);
@@ -56,16 +56,13 @@ const Layout = () => {
           > 
             <li className="flex justify-start items-start  gap-3 ">
             <HiOutlineDocument className="flex items-center" size={25} />
-              <ul  className=" w-full flex flex-col items-center gap-4 text-[.9em]">
+              <ul  className=" w-full flex flex-col items-center text-center gap-4 text-[.9em]">
                 
                
                 <li className={` ${showSelect ? "block" :'hidden'}`}   onClick={() => setShowSelect(!showSelect)}>{currentText}</li>
                 <Link to='/edit'><li className={`block ${showSelect &&'hidden'}`}   onClick={() => changeText("1 DETAIL")}>Edit</li></Link>
                 <li className={`block ${showSelect &&'hidden'}`}   onClick={() => changeText("2 DETAIL")}>2 Details</li>
-                <li className={`block ${showSelect &&'hidden'}`}   onClick={() => changeText("3 DETAIL")}>3 Details</li>
-               
-               
-                
+                <li className={`block ${showSelect &&'hidden'}`}   onClick={() => changeText("3 DETAIL")}>3 Details</li> 
               </ul>
               
               

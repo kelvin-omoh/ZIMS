@@ -34,7 +34,9 @@ const shouldChange=scroll > 10
             <li className='p-4'><Link to='/animals'>Animals</Link></li>
             <li className='p-4'><Link to='/about'>Abouts</Link></li>
             <li className='p-4'><Link to='/contact'>Contact Us</Link></li>
-            <button className='ml-4 py-[10px] px-7'><Link to='/tickets'>Tickets</Link></button>
+            <button className='ml-4 py-[10px] px-7 bg-white text-black'><Link to='/verify'>Login</Link></button>
+            <button className='ml-4 py-[10px] px-7 bg-indigo-800'><Link to='/signup'>Sign Up</Link></button>
+
           </ul>
         </div>
 
@@ -51,7 +53,12 @@ const shouldChange=scroll > 10
             <li className='text-xl p-4'><Link to='/animals'>Animals</Link></li>
             <li className='text-xl p-4'><Link to='/about'>Abouts</Link></li>
             <li className='text-xl p-4'><Link to='/contact'>Contact Us</Link></li>
-            <button className='m-8'><Link to='/tickets'>Tickets</Link></button>
+            <div className='flex flex-col gap-3 mb-5'>
+            <button className=' bg-white text-black'><Link to='/tickets'>Login</Link></button>
+            <button className=' bg-indigo-800'><Link to='/tickets'>Sign Up</Link></button>
+            </div>
+            
+
 
           </ul>
         </div>

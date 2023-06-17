@@ -1,15 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ZOO from '../assets/zoologicalgardens.jpg'
+import Lion from '../assets/NewLion.jpg'
+import Giraffe from '../assets/giraffe2.jpg'
+import Eland from '../assets/eland.jpg'
 
 const Mission = () => {
   return (
     <div className="max-w-[1240px] mx-auto mt-[50px] md:mt-[80px] pb-11 px-4 grid lg:grid-cols-2 gap-4">
       {/* Left side */}
-      <div>
+      <div >
         <img
           className="w-full h-[450px] object-cover rounded-xl"
-          src={ZOO}
+          src={Eland}
           // src="https://media.istockphoto.com/id/531467588/photo/black-jaguar-walking-towards-viewer.jpg?s=612x612&w=0&k=20&c=dPEqSbFF3TyroEoxxb4-1S6CAr9Qw8VBrdpwbyDLeE8="
           alt="/"
         />

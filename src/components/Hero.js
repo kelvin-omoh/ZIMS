@@ -23,9 +23,9 @@ const Hero = () => {
           country as you encounter majestic lions, elegant elephants,graceful
           giraffes,and more
         </p>
-        <div className="flex">
-              <button className=" text-white m-2 bg-[#3CCF4E]"><Link to='/tickets'>Normal</Link></button>
-               <button className=" text-white m-2"><Link to='/tickets'>Foreigner</Link></button>
+        <div className="flex gap-3">
+              <button className=" text-white  bg-[#3CCF4E]"><Link to='/tickets'>Normal Ticket</Link></button>
+               <button className=" text-white "><Link to='/tickets'>Foreigner Ticket</Link></button>
             </div>
       </div>
     </div>

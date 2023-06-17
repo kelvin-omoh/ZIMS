@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import TAMA from "../assets/TAMA.jpg";
+import Profile from '../assets/profile.jpg'
 import { UserAuth } from "../Context/AuthContext";
 
 const NavDashboard = () => {
@@ -24,7 +25,7 @@ const NavDashboard = () => {
   const handleLogout = async () => {
       try {
             await logout();
-            navigate('/admin');
+            navigate('/verify');
             alert('logged out')
       }catch (e) {
         alert(e.message);
@@ -45,7 +46,7 @@ const NavDashboard = () => {
               ref={imgRef}
               onClick={() => setOpen(!open)}
               className="cursor-pointer rounded-full w-full h-full object-cover"
-              src={TAMA}
+              src={Profile}
             />
 
             {open && (
