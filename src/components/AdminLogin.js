@@ -34,11 +34,11 @@ const AdminLogin = () => {
             <h2 className='text-4xl font-bold text-center p-4'>ZIMS Admin</h2>
             <div className='flex z-[90] flex-col '>
                 <label>Email</label>
-                <input onChange={(e) => setEmail(e.target.value)} className='border relative z-[90] bg-gray-100 p-2'  type='email'></input>
+                <input required onChange={(e) => setEmail(e.target.value)} className='border relative z-[90] bg-gray-100 p-2'  type='email'></input>
             </div>
             <div className='flex flex-col mb-4 '>
                 <label>Password</label>
-                <input onChange={(e) => setPassword(e.target.value)} className='border relative bg-gray-100 p-2' type='password'></input>
+                <input required onChange={(e) => setPassword(e.target.value)} className='border relative bg-gray-100 p-2' type='password'></input>
             </div>
             <button className='w-full py-3 mt-3 z-[90] bg-indigo-600 hover:bg-indigo-500 relative text-white'>Sign In</button>
             <p className='flex z-[90] items-center mt-2'><input type='checkbox'/>Remember Me</p>

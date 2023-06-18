@@ -16,9 +16,9 @@ const Carousel = () => {
 
   return (
     <div className="max-w-[1240px] mx-auto py-4 px-4">
-      <div className="grid grid-cols-2 ">
-        <div>
-          <h1 className="font-bold  text-[1em] md:text-5xl p-1 ">
+      <div className="grid grid-cols-3 ">
+        <div className="col-span-2">
+          <h1 className="font-bold  text-[1.5em] md:text-5xl p-1 ">
             Explore Our <span className="italic text-[#3CCF4E]">Animals</span>
           </h1>
         </div>
