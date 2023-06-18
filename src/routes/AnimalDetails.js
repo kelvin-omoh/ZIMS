@@ -8,25 +8,28 @@ const AnimalDetails = () => {
   const [animalName,setAnimalNAme]=useState('')
   const [feedNumber,setFeedNumber]=useState('')
   const [breed,setBreed]=useState('')
-  const handlesubmit=async()=>{
-  
+  const handleSubmit=async(e)=>{
+    // alert("succeful")
+    e.preventDefault()
+   const items= {
+    animalName,
+    cageNumber,
+    feedNumber,
+    breed
+   }
     try {
-      const docRef = await addDoc(collection(db, "AnimalDetails"), {
-       animalName,
-       cageNumber,
-       feedNumber,
-       breed
-      });
-     alert("succeful")
-     setAnimalNAme('')
-     setCageNumber('')
-     setFeedNumber('')
-     setBreed('')
+      const docRef = await addDoc(collection(db, "AnimalDetails"),items);
       console.log("Document written with ID: ", docRef.id);
     } catch (e) {
       console.error("Error adding document: ", e);
     }
+    alert("succeful")
+    setAnimalNAme('')
+    setCageNumber('')
+    setFeedNumber('')
+    setBreed('')
 
+   
   }
 
   return (
@@ -36,7 +39,7 @@ const AnimalDetails = () => {
 
         <div className='absolute left-[13.5%] w-[81%] mt-40 ml-11 p-8 bg-zinc-100 z-[10]'>
             <h3 className='font-bold text-xl'>Add Animal Details</h3>
-            <form  onSubmit={()=>handlesubmit()} className=' w-full flex flex-col py-4 '>
+            <form    className=' w-full flex flex-col py-4 '>
                 <label className='pb-1  pl-1'>Cage Number</label>
                 <input required value={cageNumber} onChange={(e)=>setCageNumber(e.target.value)} className='p-2 border border-gray-400 bg-zinc-50' type='text' />
                 <label className='pt-3 pl-1'>Animal Name</label>
@@ -48,9 +51,9 @@ const AnimalDetails = () => {
                 <input  required value={breed} onChange={(e)=>setBreed(e.target.value)} className='p-2 border border-gray-400 bg-zinc-50'></input>
             </form>
             <div className=''>
-        <button type='submit' className=" bg-indigo-600 justify-center flex text-white items-center ">
+        <button onClick={(e)=>handleSubmit(e)} type='submit'  className=" bg-indigo-600 justify-center flex text-white items-center ">
               Submit
-            </button>
+        </button>
         </div>
         </div>
         
