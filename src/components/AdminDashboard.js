@@ -17,6 +17,7 @@ const AdminDashboard = () => {
       console.log(doc.data());
     });
     setData(animalDetail)
+    console.log(animalDetail);
     // console.log(data,"ee");
   
    
@@ -51,11 +52,9 @@ const AdminDashboard = () => {
   },[data])
   return (
     <div className="relative w-full h-full flex  ">
-      {/* <Layout /> */}
-      {/* <NavDashboard /> */}
 
       <div className="absolute left-[13.5%] w-[86.5%]  mt-24 -z-10">
-        {/* <div className="flex justify-center items-center">hbvskjdfhlkhfldzhldszh</div> */}
+      
         <div class="h-[200px] grid grid-cols-1 md:grid-cols-4 gap-11 my-20 p-3 font-bold">
           <div class="bg-zinc-300 p-5 ">Total Animals <p className="text-red-700">{data.length}</p></div>
           <div class="col-span-2 text-center bg-zinc-300  p-5   ">Total Normal Adult Visitor
@@ -64,16 +63,19 @@ const AdminDashboard = () => {
           <div class=" bg-zinc-300 p-5  ">
             Total Normal children Visitor <p className="text-indigo-700"> {supeerVisorData.length>0 ?supeerVisorData.reduce((total, obj) => total + parseInt(obj.NormalChild || 0), 0):0}</p>
           </div>
+
           <div class=" bg-zinc-300 p-5">Today Normal Adult Visitor  <p className="text-green-700">{supeerVisorData.length>0 ? supeerVisorData[0].NormalAdult :0}</p> </div>
           <div class="bg-zinc-300 p-5  ">Today Normal child Visitor  <p className="text-green-700">{supeerVisorData.length>0? supeerVisorData[0].NormalChild:0}</p></div>
           <div class="bg-zinc-300  p-5  ">Yesterday Normal Adult Visitor  <p className="text-red-700">{supeerVisorData.length>0?supeerVisorData[1].NormalAdult:0}</p></div>
           <div class="bg-zinc-300  p-5  ">yesterday Normal child Visitor <p className="text-red-700">{supeerVisorData.length>0?supeerVisorData[1].NormalChild:0}</p> </div>
+
           <div class=" text-center  col-span-2 bg-zinc-300  p-5">
             Total Foreigner Adult Visitor <p className="text-indigo-700"> {supeerVisorData.length>0 ?supeerVisorData.reduce((total, obj) => total + parseInt(obj.ForeignerAdult || 0), 0):0}</p>
           </div>
           <div class=" text-center col-span-2 bg-zinc-300 p-5">
             Total Foreigner child Visitor  <p className="text-indigo-700">{supeerVisorData.length>0 ?supeerVisorData.reduce((total, obj) => total + parseInt(obj.ForeignerChild || 0), 0):0}</p>
           </div>
+
           <div class=" bg-zinc-300 p-5   ">Today Foreigner Adult Visitor <p className="text-green-700"> {supeerVisorData.length>0 ?supeerVisorData[0].ForeignerAdult:0}</p></div>
           <div class=" bg-zinc-300 p-5   ">Today Foreigner Child Visitor <p className="text-green-700"> {supeerVisorData.length>0 ?supeerVisorData[0].ForeignerChild:0}</p></div>
           <div class=" bg-zinc-300 p-5   ">
@@ -81,9 +83,11 @@ const AdminDashboard = () => {
           </div>
           <div class=" bg-zinc-300 p-5   ">
             Yesterday Foreigner Child Visitor <p className="text-red-700">{supeerVisorData.length>0?supeerVisorData[1].ForeignerChild:0}</p>
+
           </div>
         </div>
       </div>
+
     </div>
   );
 };

@@ -2,9 +2,37 @@ import React from "react";
 import UpdateAnimal from "./UpdateAnimal";
 import Layout from "./Layout";
 import NavDashboard from "./NavDashboard";
+import { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore"; 
+import { db } from "../firebase";
 
 const AddRemove = () => {
   const handleUpdate = {};
+  const [data,setData]=useState([])
+  useEffect(()=>{
+
+    const ReadingAnimalDetails=async()=>{
+     const querySnapshot = await getDocs(collection(db, "AnimalDetails"));
+     const animalDetail=[]
+     querySnapshot.forEach((doc) => {
+       animalDetail.push({...doc.data(),id:doc.id})
+       console.log(doc.data());
+     });
+     setData(animalDetail)
+     console.log(animalDetail);
+     // console.log(data,"ee");
+   
+    
+  
+   }
+ 
+ 
+ 
+   
+ 
+    ReadingAnimalDetails()
+ 
+   },[])
 
   return (
   
@@ -29,17 +57,21 @@ const AddRemove = () => {
               </tr>
             </thead>
             <tbody className="text-center">
-              <tr className="border-b border-gray-300 items-center">
-                <th className="text-md px-6 py-3">1</th>
-                <td className="text-md px-6 py-3">232</td>
-                <td className="text-md px-6 py-3">Lion</td>
-                <td className="text-md px-6 py-3">7</td>
-                <td className="text-md px-6 py-3">Lion</td>
-                <td className="text-md px-6 py-3 flex justify-center items-center gap-2 text-white">
-                  <button className="bg-blue-600 py-1 px-3">Edit</button>
-                  <button className="bg-red-600 py-1 px-3">Delete</button>
-                </td>
-              </tr>
+              {data.map((animal,id)=>(
+
+<tr className="border-b border-gray-300 items-center">
+<th className="text-md px-6 py-3">{id+1}</th>
+<td className="text-md px-6 py-3">{animal.cageNumber}</td>
+<td className="text-md px-6 py-3">{animal.animalName}</td>
+<td className="text-md px-6 py-3">{animal.feedNumber}</td>
+<td className="text-md px-6 py-3">{animal.breed}</td>
+<td className="text-md px-6 py-3 flex justify-center items-center gap-2 text-white">
+  <button className="bg-blue-600 py-1 px-3">Edit</button>
+  <button className="bg-red-600 py-1 px-3">Delete</button>
+</td>
+</tr>
+              ))}
+             
 
               {/* <tr className="border-b border-gray-300">
                 <th className="text-md px-6 py-3">2</th>
