@@ -61,12 +61,9 @@ const Layout = () => {
                
                 <li className={` ${showSelect ? "block" :'hidden'}`}   onClick={() => setShowSelect(!showSelect)}>{currentText}</li>
                 <Link to='/edit'><li className={`block ${showSelect &&'hidden'}`}   onClick={() => changeText("1 DETAIL")}>Edit</li></Link>
-                <li className={`block ${showSelect &&'hidden'}`}   onClick={() => changeText("2 DETAIL")}>2 Details</li>
-                <li className={`block ${showSelect &&'hidden'}`}   onClick={() => changeText("3 DETAIL")}>3 Details</li> 
+                {/* <li className={`block ${showSelect &&'hidden'}`}   onClick={() => changeText("2 DETAIL")}>2 Details</li>
+                <li className={`block ${showSelect &&'hidden'}`}   onClick={() => changeText("3 DETAIL")}>3 Details</li>  */}
               </ul>
-              
-              
-
               <BsChevronDown className="" size={20}/>
             </li>
           </Link>

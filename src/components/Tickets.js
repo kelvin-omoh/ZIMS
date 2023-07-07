@@ -50,12 +50,13 @@ const Tickets = () => {
           ZIMS Barnyard “petting zoo” open Friday-Sunday
         </p>
         <div className="py-4">
-          {/* <button
+          <button
+           className="bg-orange-500 text-white py-4 font-bold px-11"
             onClick={() => setModal(true)}>
-              hello
-            </button> */}
+             Buy Tickets Now
+            </button>
 
-<button
+{/* <button
         onClick={() => {
           handleFlutterPayment({
             callback: (response) => {
@@ -68,11 +69,10 @@ const Tickets = () => {
         }}
       
             className="bg-orange-500 text-white py-4 font-bold px-11"
-          >
-            {/* <Link to="/tickets"> */}
+         >
               Buy Tickets Now {process.env.PUBLICKEY}
-              {/* </Link> */}
-          </button>
+          
+          </button> */}
           <Modal onClose={handleOnClose} visible={showModal} />
         </div>
       </div>
@@ -80,31 +80,31 @@ const Tickets = () => {
       <div className="bg-zinc-100 py-3 px-5 rounded-xl p-9">
         <div className="flex justify-between py-2 border-b-2 border-zinc-300">
           <p className="text-[1.1rem]">Weekday-Senior (51-62+) Ticket</p>
-          <p className="text-[1.1rem] font-thin ">#2000</p>
+          <p className="text-[1.1rem] font-thin ">₦3500</p>
         </div>
         <div className="flex justify-between py-2 border-b-2 border-zinc-300">
-          <p className="text-[1.1rem]">Weekday-Adult (13-61) Ticket</p>
-          <p className="text-[1.1rem] font-thin ">#1500</p>
+          <p className="text-[1.1rem]">Weekday-Adult (18-50) Ticket</p>
+          <p className="text-[1.1rem] font-thin ">₦4000</p>
         </div>{" "}
         <div className="flex justify-between py-2 border-b-2 border-zinc-300">
-          <p className="text-[1.1rem]">Weekday-child (4-12) Ticket</p>
-          <p className="text-[1.1rem] font-thin ">#500</p>
+          <p className="text-[1.1rem]">Weekday-child (4-17) Ticket</p>
+          <p className="text-[1.1rem] font-thin ">₦2500</p>
         </div>{" "}
         <div className="flex justify-between py-2 border-b-2 border-zinc-300">
           <p className="text-[1.1rem]">Weekend-Senior (51-62+) Ticket</p>
-          <p className="text-[1.1rem] font-thin ">#3000</p>
+          <p className="text-[1.1rem] font-thin ">₦3000</p>
         </div>
         <div
           className="flex justify-between py-2 border-b-2 border-zinc-300"
           border-b-2
           border-zinc-300
         >
-          <p className="text-[1.1rem]">Weekend-Adult (13-50) Ticket</p>
-          <p className="text-[1.1rem] font-thin ">#3500</p>
+          <p className="text-[1.1rem]">Weekend-Adult (18-50) Ticket</p>
+          <p className="text-[1.1rem] font-thin ">₦4000</p>
         </div>
         <div className="flex justify-between py-2 border-b-2 border-zinc-300">
-          <p className="text-[1.1rem]">Weekend-child (4-13) Ticket</p>
-          <p className="text-[1.1rem] font-thin ">#1000</p>
+          <p className="text-[1.1rem]">Weekend-child (4-17) Ticket</p>
+          <p className="text-[1.1rem] font-thin ">₦2000</p>
         </div>
         <div className=" py-2">
           <p className="text-[1.1rem]  text-[#41ba4f]">

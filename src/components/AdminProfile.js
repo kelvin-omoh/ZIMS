@@ -19,13 +19,13 @@ const AdminProfile = () => {
             <h3 className='font-bold text-xl'>Admin Profile</h3>
             <form className='w-full flex flex-col py-4'>
                 <label className='pb-1  pl-1'>Admin Name</label>
-                <input  className='p-2 border border-gray-400 bg-zinc-50 ' type='text' name='Your name'></input>
+                <input  className='p-2 border border-gray-400 bg-zinc-50 ' type='text' placeholder='Essien Essien' name='Your name'></input>
                 <label className='pb-1  pt-3 pl-1'>User Name</label>
-                <input  className='p-2 border border-gray-400 bg-zinc-50 ' type='username' name='user name'></input> 
+                <input  className='p-2 border border-gray-400 bg-zinc-50 ' type='username' placeholder='Essien@1234' name='user name'></input> 
                  <label className='pb-1 pt-3  pl-1'>Contact Number</label>
-                <input  className='p-2 border border-gray-400 bg-zinc-50 ' type='tel' name='phone number'></input>
+                <input  className='p-2 border border-gray-400 bg-zinc-50 ' type='tel' placeholder='07030657654' name='phone number'></input>
                 <label  className='pb-1 pt-3  pl-1'>Email Address </label> 
-                <input  className='p-2 border border-gray-400 bg-zinc-50 ' type='email' name='email'></input>
+                <input  className='p-2 border border-gray-400 bg-zinc-50 ' type='email' placeholder='eessien396@gmail.com' name='email'></input>
             </form>
             {/* {user && user.email} */}
 
