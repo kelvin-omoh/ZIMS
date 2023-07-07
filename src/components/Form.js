@@ -45,9 +45,9 @@ const Form = () => {
         <div className='flex flex-col gap-4'>
           <form ref={form} onSubmit={sendEmail} className='flex flex-col'>
             <label className='pt-4' >Your Name</label>
-            <input className='rounded-lg  h-12 bg-[#e9e9e9] p-2' type='text' name=" your name"></input>
-            <label className='pt-4' >Email</label>
-            <input className='rounded-lg h-12 bg-[#e9e9e9] p-2' type='email' name="email"></input>
+            <input className='rounded-lg  h-12 bg-[#e9e9e9] p-2' type='text' placeholder="Full Name" name=" your name"></input>
+            <label className='pt-4' >Email</label>  
+            <input className='rounded-lg h-12 bg-[#e9e9e9] p-2' type='email' placeholder="email" name="email"></input>
             <label className='pt-4' >Details</label>
             <textarea className='bg-[#e9e9e9]   rounded-lg p-3' rows='6' placeholder='Type a short message here' name="message"/>
             

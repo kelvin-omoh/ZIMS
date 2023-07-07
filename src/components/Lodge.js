@@ -7,18 +7,18 @@ const Lodge = () => {
         {/* Left side */}
         <div>
           <h3 className="font-bold text-3xl">Lodging</h3>
-          <li className="py-1">Eko Atlantic Hotel</li>
+          <li className="py-1">Bible Guest House Hotel</li>
           <li className="py-1">Fatokun Hotels</li>
-          <li className="py-1">Transcorp Hotel</li>
-          <li className="py-1">Temperance Hotel</li>
-          <li className="py-1">Eko Atlantic Hotel</li>
-          <li className="py-1">Eko Atlantic Hotel</li>
-          <li className="py-1">Eko Atlantic Hotel</li>
-          <li className="py-1">Eko Atlantic Hotel</li>
-          <li className="py-1">Eko Atlantic Hotel</li>
-          <li className="py-1">Eko Atlantic Hotel</li>
-          <li className="py-1">Eko Atlantic Hotel</li>
-          <li className="py-1">Eko Atlantic Hotel</li>
+          <li className="py-1">Channel 8 Premium Hotel</li>
+          <li className="py-1">Tiffany Hotel</li>
+          <li className="py-1">Ibadan Hotel</li>
+          <li className="py-1">Cosmos city SuitesHotel</li>
+          <li className="py-1">Rofel Hotel</li>
+          <li className="py-1">E-Exclusive Hotel</li>
+          <li className="py-1">Koltol Paradise Hotel</li>
+          <li className="py-1">Enike Hotel</li>
+          <li className="py-1">Brava Hotel</li>
+          <li className="py-1">Adebayo Akande Hotel</li>
         </div>
 
         {/* Right side */}
