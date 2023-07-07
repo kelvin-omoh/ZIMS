@@ -1,11 +1,35 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Modal from "./Modal";
+import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
+import env from "react-dotenv";
 
 const Tickets = () => {
   const [showModal, setModal] = useState(false);
 
   const handleOnClose = () => setModal(false);
+
+  const config = {
+    public_key: 'FLWPUBK_TEST-841c10b026f35195c62cfc032d14c5a0-X',
+    tx_ref: Date.now(),
+    amount: 200,
+    currency: 'NGN',
+    payment_options: 'card,mobilemoney,ussd',
+    customer: {
+      email: 'enaikeleomoh@gmail.com',
+       phone_number: '09073597660',
+      name: 'Enaikele Omoh Kelvin',
+    },
+    customizations: {
+      title: 'ZIMS TICKET',
+      description: 'Payment for items in cart',
+      logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
+    },
+  };
+
+  const handleFlutterPayment = useFlutterwave(config);
+
+
 
   return (
     <div className="max-w-[1240px] mx-auto mt-11 py-4 px-4 grid grid-cols-1 md:grid-cols-2 gap-4 ">
@@ -23,14 +47,31 @@ const Tickets = () => {
 
 
         <p className="py-3 text-[1.1rem]">
-          *ZIMS Barnyard “petting zoo” open Friday-Sunday
+          ZIMS Barnyard “petting zoo” open Friday-Sunday
         </p>
         <div className="py-4">
-          <button
-            onClick={() => setModal(true)}
+          {/* <button
+            onClick={() => setModal(true)}>
+              hello
+            </button> */}
+
+<button
+        onClick={() => {
+          handleFlutterPayment({
+            callback: (response) => {
+               console.log(response);
+               console.log(1);
+                closePaymentModal() // this will close the modal programmatically
+            },
+            onClose: () => {},
+          });
+        }}
+      
             className="bg-orange-500 text-white py-4 font-bold px-11"
           >
-            <Link to="/tickets">Buy Tickets Now</Link>
+            {/* <Link to="/tickets"> */}
+              Buy Tickets Now {process.env.PUBLICKEY}
+              {/* </Link> */}
           </button>
           <Modal onClose={handleOnClose} visible={showModal} />
         </div>
