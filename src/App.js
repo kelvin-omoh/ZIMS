@@ -28,6 +28,7 @@ import SDashboard from "./routes/SDashboard";
 import VisitorsDetails from "./routes/VisitorsDetails";
 import PastRecord from "./routes/PastRecord";
 import Animals2 from "./routes/Animals2";
+import AnimalId from "./components/AnimalId";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/animals" element={<Animals />} />
+        <Route path="/animals/:id" element={<AnimalId />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/tickets" element={<Ticket />} />

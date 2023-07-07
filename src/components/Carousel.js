@@ -1,7 +1,7 @@
 import React from "react";
 import Data from "./mockData";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Carousel = () => {
   const slideLeft = () => {
@@ -13,6 +13,8 @@ const Carousel = () => {
     var slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft + 500;
   };
+  const navigate=useNavigate()
+
 
   return (
     <div className="max-w-[1240px] mx-auto py-4 px-4">
@@ -42,9 +44,11 @@ const Carousel = () => {
           id="slider"
           className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
         >
-          {Data.map((item) => (
+          {Data.map((item,id) => (
             <>
-            <div className="inline-block relative">
+            <Link to={`${id+1}`}>
+            {/* <div onClick={()=>navigate(`animals/${id+1}`)} className="inline-block relative m-7 bg-red-900 h-fit w-fit"> */}
+            <div className="inline-block relative m-7 bg-red-900 h-fit w-fit">
             <img
               className="w-[350px] h-[450px] object-cover inline-block p-4 rounded-3xl cursor-pointer hover:scale-110 ease-in-out duration-300"
               src={item.src}
@@ -54,6 +58,8 @@ const Carousel = () => {
            text-center">{item.name}</p>
             
             </div>
+            </Link>
+          
          </>
           ))}
         </div>
