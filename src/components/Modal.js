@@ -14,7 +14,7 @@ const Modal = ({ visible, onClose }) => {
 
 
   const config = {
-    public_key: 'FLWPUBK_TEST-841c10b026f35195c62cfc032d14c5a0-X',
+    public_key: `FLWPUBK-1c46a86a8acd1b72feee728436447289-X`,
     tx_ref: Date.now(),
     amount: price,
     currency: 'NGN',
