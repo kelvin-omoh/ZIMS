@@ -1,5 +1,4 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
 import Home from "./routes/Home";
 import Animals from "./routes/Animals";
 import Contact from "./routes/Contact";
@@ -29,10 +28,11 @@ import VisitorsDetails from "./routes/VisitorsDetails";
 import PastRecord from "./routes/PastRecord";
 import Animals2 from "./routes/Animals2";
 import AnimalId from "./components/AnimalId";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <>
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/animals" element={<Animals />} />
@@ -74,7 +74,7 @@ function App() {
           <Route path="/sanimal" element={<Animals2 />} />
         </Routes>
       </AuthContextProvider>
-    </>
+    </Router>
   );
 }
 

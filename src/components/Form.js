@@ -37,7 +37,7 @@ const Form = () => {
     //   <input type="submit" value="Send" />
     // </form>
 
-    <div className='max-w-[1240px] mx-auto mt-9 py-4 px-4 grid grid-cols-1 md:grid-cols-2 gap-4'>
+    <div className='max-w-[1240px]  mx-auto mt-9 py-4 px-4 grid justify-center md:justify-between items-center place-content-center  grid-cols-1 md:grid-cols-2 gap-[4em]'>
       {/* Left side */}
       <div>
         <h1 className="text-5xl md:5xl">Get In Touch</h1>
@@ -59,9 +59,9 @@ const Form = () => {
        
       </div>
       {/* Right side */}
-      <div className='w-full h-full'>
+      <div className='  h-[300px] w-[300px] md:w-[400px] md:h-[400px]'>
      {/* <iframe className='w-full h-full' class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=900&amp;height=400&amp;hl=en&amp;q=lagos ojota &amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> */}
-    <iframe className="w-full h-full  rounded-xl" class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=900&amp;height=900&amp;hl=en&amp;q=ibadan zoo&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+    <iframe  className="h-[300px] w-[300px] md:w-ful md:h-[500px] md:w-[500px]  rounded-xl" height={300} width={350}   class="gmap_iframe"  frameborder="0" scrolling="no" marginheight="0"  marginwidth="0" src="https://maps.google.com/maps?width=900&amp;height=900&amp;hl=en&amp;q=ibadan zoo&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
     </div>
 
     </div>

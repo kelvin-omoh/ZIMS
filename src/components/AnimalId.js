@@ -132,7 +132,7 @@ const AnimalId = () => {
         </div>
         {/* Did you know */}
         <div className="flex justify-center mt-20 mb-6 px-5">
-          <div className="w-[1000px]  h-fit md:h-[180px] bg-[#F0EDD4] rounded-2xl py-11 px-9  text-center">
+          <div className="w-[1000px]  h-fit bg-[#F0EDD4] rounded-2xl   text-center">
             <h1>{current.know}</h1>
             <p className="py-7 text-lg">{current.aboutKnow}</p>
           </div>

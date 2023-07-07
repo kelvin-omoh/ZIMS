@@ -8,7 +8,7 @@ const AnimalImages = () => {
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-[2rem] py-11">
         {Data.map((item,id) => (
           <>
-          <Link to={`${id+1}`}>
+          <Link to={`/animals/${id+1}`}>
            <div className=" relative  w-full h-[20em] rounded-lg">
 
              <img
