@@ -3,7 +3,10 @@ import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
 
 const Modal = ({ visible, onClose }) => {
 
-  const [price,setPrice]=useState('3500')
+  const [price,setPrice]=useState('200')
+  const [name,setName]=useState('')
+  const[email,setEmail]=useState('')
+  const[phoneNumber,setPhonenumber]=useState('')
   const handleOnClose = (e) => {
     if (e.target.id === "container") onClose();
   };
@@ -14,15 +17,15 @@ const Modal = ({ visible, onClose }) => {
 
 
   const config = {
-    public_key: `FLWPUBK-1c46a86a8acd1b72feee728436447289-X`,
+    public_key: `${process.env.REACT_APP_PUBLICKEY}`,
     tx_ref: Date.now(),
     amount: price,
     currency: 'NGN',
     payment_options: 'card,mobilemoney,ussd',
     customer: {
-      email: 'enaikeleomoh@gmail.com',
-       phone_number: '09073597660',
-      name: 'Enaikele Omoh Kelvin',
+      email,
+       phone_number: phoneNumber,
+      name,
     },
     customizations: {
       title: 'ZIMS TICKET',
@@ -50,15 +53,15 @@ const Modal = ({ visible, onClose }) => {
     >
       <div className="h-[400px] w-[500px] bg-white p-5 text-black place-items-center rounded-xl ">
       <form onSubmit={(e)=>e.preventDefault()}  className='flex flex-col'>
-            <label className='pt-4' >Full Name</label>
-            <input className='rounded-lg  h-12 bg-[#e9e9e9] p-2' type='text' placeholder="Full Name" name=" your name"></input>
+            <label  className='pt-4' >Full Name</label>
+            <input value={name} onChange={(e)=>setName(e.target.value)} className='rounded-lg  h-12 bg-[#e9e9e9] p-2' type='text' placeholder="Full Name" name=" your name"></input>
             <label className='pt-4' >Email</label>
-            <input className='rounded-lg h-12 bg-[#e9e9e9] p-2' type='email' placeholder="email" name="email"></input>
+            <input value={email} onChange={(e)=>setEmail(e.target.value)} className='rounded-lg h-12 bg-[#e9e9e9] p-2' type='email' placeholder="email" name="email"></input>
             <label className='pt-4 pb-4'  for="cars">Select Ticket type</label>
 
               <select onChange={(e)=>{setPrice(e.target.value)
              }} className="bg-[#e9e9e9] h-11 p-2 " name="cars" id="cars">
-                <option value={3500} ><p className="text-[1.1rem]">Weekday-Senior (51-62+) - ₦3500</p></option>
+                <option value={200} ><p className="text-[1.1rem]">Weekday-Senior (51-62+) - ₦200</p></option>
                 <option value={4000}><p className="text-[1.1rem]">Weekday-Adult (18-50) - ₦4000</p> </option>
                 <option value={2500}><p className="text-[1.1rem]">Weekday-Child (4-17) - ₦2500</p></option>
                 <option  value={3500}><p className="text-[1.1rem]">Weekend-Senior (51-62+) - ₦4000</p></option>
