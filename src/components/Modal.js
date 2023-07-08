@@ -48,12 +48,14 @@ const Modal = ({ visible, onClose }) => {
       id="container"
       className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center z-[10] "
     >
-      <div className="h-[400px] w-[500px] bg-white p-5 text-black place-items-center rounded-xl ">
+      <div className="h-[500px] w-[500px] bg-white p-5 text-black place-items-center rounded-xl ">
       <form onSubmit={(e)=>e.preventDefault()}  className='flex flex-col'>
             <label className='pt-4' >Full Name</label>
             <input className='rounded-lg  h-12 bg-[#e9e9e9] p-2' type='text' placeholder="Full Name" name=" your name"></input>
             <label className='pt-4' >Email</label>
-            <input className='rounded-lg h-12 bg-[#e9e9e9] p-2' type='email' placeholder="email" name="email"></input>
+            <input className='rounded-lg  h-12 bg-[#e9e9e9] p-2' type='text' placeholder="Full Name" name=" your name"></input>
+            <label className='pt-4' >Phone No</label>
+            <input className='rounded-lg h-12 bg-[#e9e9e9] p-2' type='tel' placeholder="phone no" name="Phone no"></input>
             <label className='pt-4 pb-4'  for="cars">Select Ticket type</label>
 
               <select onChange={(e)=>{setPrice(e.target.value)
