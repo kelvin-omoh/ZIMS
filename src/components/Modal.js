@@ -60,12 +60,18 @@ const Modal = ({ visible, onClose }) => {
 
               <select onChange={(e)=>{setPrice(e.target.value)
              }} className="bg-[#e9e9e9] h-11 p-2 " name="cars" id="cars">
-                <option value={3500} ><p className="text-[1.1rem]">Weekday-Senior (51-62+) - ₦3500</p></option>
+                <option value={3500} ><p className="text-[1.1rem]">Weekday-Senior  (51-62+) - ₦3500</p></option>
                 <option value={4000}><p className="text-[1.1rem]">Weekday-Adult (18-50) - ₦4000</p> </option>
                 <option value={2500}><p className="text-[1.1rem]">Weekday-Child (4-17) - ₦2500</p></option>
                 <option  value={3500}><p className="text-[1.1rem]">Weekend-Senior (51-62+) - ₦4000</p></option>
                 <option  value={4000}><p className="text-[1.1rem]">Weekend-Adult (18-50) - ₦3500</p></option>
                 <option value={2000}><p className="text-[1.1rem]">Weekend-Child (4-17) - ₦2000</p></option>
+                <option value={3500} ><p className="text-[1.1rem]">Weekday-Senior Foreigner  (51-62+) - $10</p></option>
+                <option value={4000}><p className="text-[1.1rem]">Weekday-Adult Foreigner (18-50) - $10</p> </option>
+                <option value={2500}><p className="text-[1.1rem]">Weekday-Child  Foreigner(4-17) - $8</p></option>
+                <option  value={3500}><p className="text-[1.1rem]">Weekend-Senior Foreigner (51-62+) - $11</p></option>
+                <option  value={4000}><p className="text-[1.1rem]">Weekend-Adult Foreigner (18-50) - $11</p></option>
+                <option value={2000}><p className="text-[1.1rem]">Weekend-Child Foreigner(4-17) - $8</p></option>
 
 
               </select>

@@ -43,7 +43,7 @@ const Signin = () => {
         </div>
         <button className='w-full py-3 mt-3 z-[90] bg-indigo-600 hover:bg-indigo-500 relative text-white'>Sign In</button>
         <p className='flex z-[90] items-center mt-2'><input type='checkbox'/>Remember Me</p>
-        <p className=' z-[90]  text-center mt-8'>Not an Admin? <Link to='/signup' className=' cursor-pointer underline z-[90]'> Sign up now</Link></p>
+        <p className=' z-[90]  text-center mt-8'>Not a supervisor? <Link to='/signup' className=' cursor-pointer underline z-[90]'> Sign up now</Link></p>
  </form>
 </div>
 
