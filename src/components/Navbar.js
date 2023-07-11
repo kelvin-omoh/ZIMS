@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-
+import logo from '../assets/logo.png'
 const Navbar = () => {
 
   const [nav, setNav] = useState(false);
@@ -27,7 +27,7 @@ const shouldChange=scroll > 10
       <div className='max-w-[1240px] md:mx-auto mx-3  flex justify-between items-center h-full '>
         <div >
           <Link to="/">
-           <h1 className='text-white cursor-pointer' >ZIMS</h1>
+          <img src={logo} className=' h-[4em] w-fit rounded-md'></img>
           </Link>
          
         </div>
