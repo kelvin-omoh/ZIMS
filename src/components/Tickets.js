@@ -28,7 +28,7 @@ const Tickets = () => {
   };
 
   const handleFlutterPayment = useFlutterwave(config);
-
+ const [currency,setCurrency]=useState('NGN')
 
 
   return (
@@ -49,11 +49,21 @@ const Tickets = () => {
         <p className="py-3 text-[1.1rem]">
           ZIMS Barnyard “petting zoo” open Friday-Sunday
         </p>
-        <div className="py-4">
+        <div className="py-4 flex gap-7  items-center">
           <button
            className="bg-orange-500 text-white py-4 font-bold px-11"
-            onClick={() => setModal(true)}>
-             Buy Tickets Now
+            onClick={() => {
+              setCurrency('NGN')
+              setModal(true)}}>
+              
+              Normal Ticket
+            </button>
+          <button
+           className="bg-[#3CCF4E] text-white py-4 font-bold px-11"
+            onClick={() =>{
+              setCurrency('USD')
+              setModal(true)}}>
+            Foreign Ticket
             </button>
 
 {/* <button
@@ -73,7 +83,7 @@ const Tickets = () => {
               Buy Tickets Now {process.env.PUBLICKEY}
           
           </button> */}
-          <Modal onClose={handleOnClose} visible={showModal} />
+          <Modal  currency={currency} onClose={handleOnClose} visible={showModal} />
         </div>
       </div>
 
