@@ -66,12 +66,7 @@ const Modal = ({ visible, onClose }) => {
                 <option  value={3500}><p className="text-[1.1rem]">Weekend-Senior normal(51-62+) - ₦4000</p></option>
                 <option  value={4000}><p className="text-[1.1rem]">Weekend-Adult normal(18-50) - ₦3500</p></option>
                 <option value={2000}><p className="text-[1.1rem]">Weekend-Child normal(4-17) - ₦2000</p></option>
-                <option value={3500} ><p className="text-[1.1rem]">Weekday-Senior Foreigner  (51-62+) - $10</p></option>
-                <option value={4000}><p className="text-[1.1rem]">Weekday-Adult Foreigner (18-50) - $10</p> </option>
-                <option value={2500}><p className="text-[1.1rem]">Weekday-Child  Foreigner(4-17) - $8</p></option>
-                <option  value={3500}><p className="text-[1.1rem]">Weekend-Senior Foreigner (51-62+) - $11</p></option>
-                <option  value={4000}><p className="text-[1.1rem]">Weekend-Adult Foreigner (18-50) - $11</p></option>
-                <option value={2000}><p className="text-[1.1rem]">Weekend-Child Foreigner(4-17) - $8</p></option>
+                
 
 
               </select>

@@ -10,43 +10,57 @@ const NormalTicket = () => {
         <table className="w-full text-center">
           <thead className="bg-zinc-100">
             <tr className="border-b border-gray-400">
-              <th className="text-md px-6 py-3">S/N</th>
+              <th className="text-md px-6 py-3">Ticket ID</th>
+              <th className="text-md px-6 py-3">Name</th>
               <th className="text-md px-6 py-3">Ticket Type</th>
               <th className="text-md px-6 py-3">Price</th>
-              <th className="text-md px-6 py-3">Action</th>
+              <th className="text-md px-6 py-3">currency</th>
             </tr>
           </thead>
           <tbody>
             <tr className="border-b border-gray-300 items-center">
-              <th className="text-md px-6 py-3">1</th>
-              <td className="text-md px-6 py-3">Normal Adult</td>
-              <td className="text-md px-6 py-3">#1000</td>
-              <td className="text-md px-6 py-3 flex justify-center items-center gap-2 text-white">
-              <Link to='/updatetickets'><button className="bg-blue-600 py-1 px-3">Edit</button></Link>
-              </td>
+              <td className="text-md px-6 py-3">73430998</td>
+              <td className="text-md px-6 py-3">Effiom Ekepyong</td>
+              <td className="text-md px-6 py-3">Weekend Normal Adult</td>
+              <td className="text-md px-6 py-3"> ₦4000  </td>
+              <td className="text-md px-6 py-3"> NGN</td>
             </tr>
 
             <tr className="border-b border-gray-300 items-center">
-              <th className="text-md px-6 py-3">2</th>
-              <td className="text-md px-6 py-3">Normal Child</td>
-              <td className="text-md px-6 py-3">#500</td>
-              <td className="text-md px-6 py-3 flex justify-center items-center gap-2 text-white">
-              <Link to='/updatetickets'><button className="bg-blue-600 py-1 px-3">Edit</button></Link>
+              <td className="text-md px-6 py-3">65430998</td>
+              <td className="text-md px-6 py-3">Nelson Odidi</td>
+              <td className="text-md px-6 py-3">Weekday Normal Adult</td>
+              <td className="text-md px-6 py-3">₦3500</td>
+              <td className="text-md px-6 py-3">NGN
               </td>
-            </tr> <tr className="border-b border-gray-300 items-center">
-              <th className="text-md px-6 py-3">3</th>
-              <td className="text-md px-6 py-3">Foreigner Adult</td>
-              <td className="text-md px-6 py-3">#3000</td>
-              <td className="text-md px-6 py-3 flex justify-center items-center gap-2 text-white">
-              <Link to='/updatetickets'><button className="bg-blue-600 py-1 px-3">Edit</button></Link>
-              </td>
-            </tr> <tr className="border-b border-gray-300 items-center">
-              <th className="text-md px-6 py-3">4</th>
-              <td className="text-md px-6 py-3">Foreigner Child</td>
-              <td className="text-md px-6 py-3">#1000</td>
-              <td className="text-md px-6 py-3 flex justify-center items-center gap-2 text-white">
-              <Link to='/updatetickets'><button className="bg-blue-600 py-1 px-3">Edit</button></Link>
-              </td>
+            </tr> 
+            <tr className="border-b border-gray-300 items-center">
+              <td className="text-md px-6 py-3">11430998</td>
+              <td className="text-md px-6 py-3">Odidi Emmanuel</td>
+              <td className="text-md px-6 py-3">Weekend Foreigner Adult</td>
+              <td className="text-md px-6 py-3"> $10</td>
+              <td className="text-md px-6 py-3">USD</td>
+            </tr>
+             <tr className="border-b border-gray-300 items-center">
+              <td className="text-md px-6 py-3">82430998</td>
+              <td className="text-md px-6 py-3">Favour Zipamor</td>
+              <td className="text-md px-6 py-3">Weekday normal Adult</td>
+              <td className="text-md px-6 py-3">₦4000</td>
+              <td className="text-md px-6 py-3">NGN</td>
+            </tr>
+            <tr className="border-b border-gray-300 items-center">
+              <td className="text-md px-6 py-3">23430998</td>
+              <td className="text-md px-6 py-3">Micheal Mark </td>
+              <td className="text-md px-6 py-3">Weekday Foreigner Adult</td>
+              <td className="text-md px-6 py-3">$30</td>
+              <td className="text-md px-6 py-3">USD</td>
+            </tr>
+            <tr className="border-b border-gray-300 items-center">
+              <td className="text-md px-6 py-3">54430998</td>
+              <td className="text-md px-6 py-3">HUMPHREYNWOKOLO</td>
+              <td className="text-md px-6 py-3">Weekday normal Adult</td>
+              <td className="text-md px-6 py-3">₦3500</td>
+              <td className="text-md px-6 py-3">NGN</td>
             </tr>
           </tbody>
         </table> 
