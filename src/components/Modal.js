@@ -100,11 +100,11 @@ const date=new Date()
   };
   const configDollar = {
     //LiVE KEY
-    // public_key: `${process.env.REACT_APP_PUBLICKEY}`,
+    public_key: `${process.env.REACT_APP_PUBLICKEY}`,
 
 
     //Test Key
-    public_key: `FLWPUBK_TEST-841c10b026f35195c62cfc032d14c5a0-X`,
+    // public_key: `FLWPUBK_TEST-841c10b026f35195c62cfc032d14c5a0-X`,
     tx_ref: Date.now(),
     amount: payPriceDollar,
     currency,
@@ -216,15 +216,15 @@ const date=new Date()
       id="container"
       className="fixed top-[5em] inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center z-[10] "
     >
-      <div className=" h-[550px] w-[350px] md:max-h-[640px] md:max-w-[500px]  bg-white p-5 text-black place-items-center rounded-xl ">
-      <form onSubmit={(e)=>e.preventDefault()}  className='flex flex-col h-[460px]  overflow-scroll'>
+      <div className=" h-[550px] w-[350px] md:max-h-[640px] md:w-[600px]  bg-white p-5 text-black place-items-center rounded-xl ">
+      <form onSubmit={(e)=>e.preventDefault()}  className='flex flex-col h-[460px]  overflow-scroll overflow-x-hidden'>
         <button 
         onClick={()=>{
         setModal(false)
         // console.log(3)
         }
         }
-        className=" h-fit w-fit rounded-full px-6 fixed  top-3 right-3
+        className=" h-fit w-fit  rounded-full px-6 fixed  top-3 right-3
          font-[500] text-[1.4em] font-mono text-white py-4">x</button>
 
             <label  className='pt-4' >Full Name</label>
@@ -313,9 +313,9 @@ const date=new Date()
                  <p>
                   
                  {currency==="NGN"?
-                <>
+                <p>
                   {counterN} Ticket(s) added
-                </>
+                </p>
                 :
                 <>
                   {counterD} Ticket(s) added
