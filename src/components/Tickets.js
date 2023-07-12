@@ -110,7 +110,7 @@ const Tickets = () => {
           border-zinc-300
         >
           <p className="text-[1.1rem]">Weekend-Adult (18-50) Ticket</p>
-          <p className="text-[1.1rem] font-thin ">₦4000</p>
+          <p className="text-[1.1rem] font-thin ">₦6000</p>
         </div>
         <div className="flex justify-between py-2 border-b-2 border-zinc-300">
           <p className="text-[1.1rem]">Weekend-child (4-17) Ticket</p>

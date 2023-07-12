@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
 import { uid } from 'uid';
 import logo from '../assets/logo.png'
@@ -9,15 +9,35 @@ const Modal = ({ visible, onClose,currency }) => {
   // const [price, setPrice] = useState('');
   const [receiptUrl, setReceiptUrl] = useState('');
  
+
   const [priceNaira,setPriceNaira]=useState(3500)
   const [priceDollar,setPriceDollar]=useState(10)
   const[payPriceNaira,setPayPriceNaira]=useState(Number(priceNaira))
   const[payPriceDollar,setPayPriceDollar]=useState(Number(priceDollar))
+  const[MainpayPriceDollar,setMainPayPriceDollar]=useState(Number(priceDollar))
+  const[MainpayPriceNaira,setMainPayPriceNaira]=useState(Number(priceNaira))
+
+
+
+  
   const[counterN,setCounterN]=useState(1)
   const[counterD,setCounterD]=useState(1)
   const [name,setName]=useState('')
   const[email,setEmail]=useState('')
   const[phoneNumber,setPhonenumber]=useState('')
+
+  useEffect(()=>{
+    setCounterN(1)
+    setCounterD(1)
+    
+   },[priceNaira,priceDollar])
+
+  // useEffect(()=>{
+  //   setCounterD(1)
+  //  },[priceDollar])
+
+
+
   const handleOnClose = (e) => {
     if (e.target.id === "container") onClose();
   };
@@ -126,56 +146,57 @@ const date=new Date()
   
   const handleIncrementPrice=()=>{
     console.log(priceNaira);
-    setPayPriceDollar((priceDollar)=> priceDollar+(priceDollar/2))
-    setPayPriceNaira((priceNaira)=> payPriceNaira + priceNaira)
+    setPayPriceDollar( payPriceDollar + Number(MainpayPriceDollar))
+    setPayPriceNaira(payPriceNaira + Number(MainpayPriceNaira))
+    console.log(payPriceNaira);
     console.log(Number(priceNaira));
     console.log(payPriceNaira);
     setCounterN(counterN+1)
+    setCounterD(counterD+1)
     }
 
-    const handleDecrementPrice=()=>{
-     if(payPriceNaira>priceNaira){
-    
+    const handleDecrementPrice=(currency)=>{
+       //   NORMAL TICKET +++++ NAIRA DECREMNET
+       if(currency==="NGN"){
 
-
-     console.log(priceNaira,'priceNaira');
-     console.log(payPriceNaira,'payPriceNaira');
-
-
+         if(payPriceNaira>MainpayPriceNaira){
       if(counterN>0 ){
         setCounterN(counterN-1)
     
-             setPayPriceNaira((priceNaira)=> priceNaira-(priceNaira/2))
+             setPayPriceNaira((priceNaira)=> priceNaira-(MainpayPriceNaira))
    
 
            
             }
      }
-
-     if(payPriceDollar>priceDollar){
-      
-    
+       }
+       else{
+ //   FOREIGN TICKET +++++ DOLLAR DECREMNET
+     if(payPriceDollar>MainpayPriceDollar){
       if(counterD>0 ){
         setCounterD(counterD-1)
     
-             setPayPriceDollar((priceDollar)=> priceDollar-(priceDollar/2))
+             setPayPriceDollar((priceDollar)=> priceDollar-(MainpayPriceDollar))
    
 
            
             }
-            }
+     }
+
+       }
+    
+   
+
+
      }
      
     
-      
      
      
 
 
 
 
-
-    
 
 
   return (
@@ -203,14 +224,14 @@ const date=new Date()
                 setPayPriceNaira(3500)
                 setPriceNaira(Number(e.target.value))
                  setPayPriceNaira(Number(e.target.value))
-  
+                 setMainPayPriceNaira(e.target.value)
                }} className="bg-[#e9e9e9] h-11 p-2 " name="cars" id="cars">
   
                   <option value={3500} ><p className="text-[1.1rem]">Weekday-Senior (51-62+) - ₦3500</p></option>
                   <option value={4000}><p className="text-[1.1rem]">Weekday-Adult (18-50) - ₦4000</p> </option>
                   <option value={2500}><p className="text-[1.1rem]">Weekday-Child (4-17) - ₦2500</p></option>
-                  <option  value={4500}><p className="text-[1.1rem]">Weekend-Senior (51-62+) - ₦4500</p></option>
-                  <option  value={4000}><p className="text-[1.1rem]">Weekend-Adult (18-50) - ₦3500</p></option>
+                  <option  value={3000}><p className="text-[1.1rem]">Weekend-Senior (51-62+) - ₦3000</p></option>
+                  <option  value={6000}><p className="text-[1.1rem]">Weekend-Adult (18-50) - ₦6000</p></option>
                   <option value={2000}><p className="text-[1.1rem]">Weekend-Child (4-17) - ₦2000</p></option>
   
   
@@ -220,6 +241,7 @@ const date=new Date()
                   setPayPriceDollar(10)
                   setPriceDollar(Number(e.target.value))
                    setPayPriceDollar(Number(e.target.value))
+                   setMainPayPriceDollar(e.target.value)
     
                  }} className="bg-[#e9e9e9] h-11 p-2 " name="cars" id="cars">
     
@@ -260,7 +282,7 @@ const date=new Date()
                 </button>
                 
                  <div className="flex justify-center items-center gap-6 ">
-                 <button onClick={handleDecrementPrice} className="w-fit h-fit border-b-4  border border-b-black/10 shadow-black font-bold text-[1.3em] text-white">- </button> 
+                 <button onClick={()=>handleDecrementPrice(currency)} className="w-fit h-fit border-b-4  border border-b-black/10 shadow-black font-bold text-[1.3em] text-white">- </button> 
                  <p>
                   
                  {currency==="NGN"?
@@ -305,6 +327,7 @@ const date=new Date()
             {currency==='NGN'?
               <FlutterWaveButton  className='text-white mt-8  w-[90%] mx-auto bg-orange-500 py-3   rounded-lg' {...fwConfigNaira} />
       :
+
         <FlutterWaveButton  className='text-white mt-8  w-[90%] mx-auto bg-orange-500 py-3   rounded-lg' {...fwConfigDollar} />
       
             
