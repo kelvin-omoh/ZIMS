@@ -83,7 +83,7 @@ const Tickets = () => {
               Buy Tickets Now {process.env.PUBLICKEY}
           
           </button> */}
-          <Modal  currency={currency} onClose={handleOnClose} visible={showModal} />
+          <Modal  currency={currency} setModal={setModal} onClose={handleOnClose} visible={showModal} />
         </div>
       </div>
 
