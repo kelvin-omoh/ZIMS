@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
 import { uid } from 'uid';
 import logo from '../assets/logo.png'
@@ -28,6 +28,7 @@ const Modal = ({ visible, onClose,currency,setModal }) => {
 
   useEffect(()=>{
     setCounterN(1)
+    console.log('1');
   },[priceNaira])
 
 
@@ -99,11 +100,11 @@ const date=new Date()
   };
   const configDollar = {
     //LiVE KEY
-    // public_key: `${process.env.REACT_APP_PUBLICKEY}`,
+    public_key: `${process.env.REACT_APP_PUBLICKEY}`,
 
 
     //Test Key
-    public_key: `FLWPUBK_TEST-841c10b026f35195c62cfc032d14c5a0-X`,
+    // public_key: `FLWPUBK_TEST-841c10b026f35195c62cfc032d14c5a0-X`,
     tx_ref: Date.now(),
     amount: payPriceDollar,
     currency,
@@ -157,58 +158,56 @@ const date=new Date()
 
   
   
-  const handleIncrementPrice=()=>{
-    console.log(priceNaira);
-    setPayPriceDollar((priceDollar)=> priceDollar+(priceDollar/2))
-    setPayPriceNaira((priceNaira)=> payPriceNaira + priceNaira)
-    console.log(Number(priceNaira));
-    console.log(payPriceNaira);
+  const handleIncrementPriceN=()=>{
+    // console.log(priceNaira);
+    setPayPriceNaira(payPriceNaira + Number(MainpayPriceNaira))
+    // console.log(payPriceNaira);
+    // console.log(Number(priceNaira));
+    // console.log(payPriceNaira);
     setCounterN(counterN+1)
+ 
+    }
+  const handleIncrementPriceD=()=>{
+    setPayPriceDollar( payPriceDollar + Number(MainpayPriceDollar))
+    setCounterD(counterD+1)
     }
 
-    const handleDecrementPrice=()=>{
-     if(payPriceNaira>priceNaira){
-    
+    const handleDecrementPriceN=(currency)=>{
+       //   NORMAL TICKET +++++ NAIRA DECREMNET
+      
 
-
-     console.log(priceNaira,'priceNaira');
-     console.log(payPriceNaira,'payPriceNaira');
-
-
+         if(payPriceNaira>MainpayPriceNaira){
       if(counterN>0 ){
         setCounterN(counterN-1)
-    
-             setPayPriceNaira((priceNaira)=> priceNaira-(priceNaira/2))
-   
-
-           
+             setPayPriceNaira((priceNaira)=> priceNaira-(MainpayPriceNaira))
             }
      }
+ 
+  }
 
-     if(payPriceDollar>priceDollar){
+    const handleDecrementPriceD=(currency)=>{
       
+     
     
+ //   FOREIGN TICKET +++++ DOLLAR DECREMNET
+     if(payPriceDollar>MainpayPriceDollar){
       if(counterD>0 ){
         setCounterD(counterD-1)
     
-             setPayPriceDollar((priceDollar)=> priceDollar-(priceDollar/2))
-   
-
-           
-            }
-            }
-     }
-     
-    
-      
-     
-     
-
-
-
-
+             setPayPriceDollar((priceDollar)=> priceDollar-(MainpayPriceDollar))
+            }}      
 
     
+
+  }
+     
+    
+     
+     
+
+
+
+
 
 
   return (
@@ -217,16 +216,15 @@ const date=new Date()
       id="container"
       className="fixed top-[5em] inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center z-[10] "
     >
-
-      <div className=" h-[550px] w-[350px] md:max-h-[640px] md:max-w-[500px]  bg-white p-5 text-black place-items-center rounded-xl ">
-      <form onSubmit={(e)=>e.preventDefault()}  className='flex flex-col h-[460px]  overflow-scroll'>
+      <div className=" h-[550px] w-[350px] md:max-h-[640px] md:w-[600px]  bg-white p-5 text-black place-items-center rounded-xl ">
+      <form onSubmit={(e)=>e.preventDefault()}  className='flex flex-col h-[460px]  overflow-scroll overflow-x-hidden'>
         <button 
         onClick={()=>{
         setModal(false)
         // console.log(3)
         }
         }
-        className=" h-fit w-fit rounded-full px-6 fixed  top-3 right-3
+        className=" h-fit w-fit  rounded-full px-6 fixed  top-3 right-3
          font-[500] text-[1.4em] font-mono text-white py-4">x</button>
 
             <label  className='pt-4' >Full Name</label>
@@ -246,14 +244,14 @@ const date=new Date()
                 setPayPriceNaira(3500)
                 setPriceNaira(Number(e.target.value))
                  setPayPriceNaira(Number(e.target.value))
-  
+                 setMainPayPriceNaira(e.target.value)
                }} className="bg-[#e9e9e9] h-11 p-2 " name="cars" id="cars">
   
                   <option value={3500} ><p className="text-[1.1rem]">Weekday-Senior (51-62+) - ₦3500</p></option>
                   <option value={4000}><p className="text-[1.1rem]">Weekday-Adult (18-50) - ₦4000</p> </option>
                   <option value={2500}><p className="text-[1.1rem]">Weekday-Child (4-17) - ₦2500</p></option>
-                  <option  value={4500}><p className="text-[1.1rem]">Weekend-Senior (51-62+) - ₦4500</p></option>
-                  <option  value={4000}><p className="text-[1.1rem]">Weekend-Adult (18-50) - ₦3500</p></option>
+                  <option  value={3000}><p className="text-[1.1rem]">Weekend-Senior (51-62+) - ₦3000</p></option>
+                  <option  value={6000}><p className="text-[1.1rem]">Weekend-Adult (18-50) - ₦6000</p></option>
                   <option value={2000}><p className="text-[1.1rem]">Weekend-Child (4-17) - ₦2000</p></option>
   
   
@@ -263,6 +261,7 @@ const date=new Date()
                   setPayPriceDollar(10)
                   setPriceDollar(Number(e.target.value))
                    setPayPriceDollar(Number(e.target.value))
+                   setMainPayPriceDollar(e.target.value)
     
                  }} className="bg-[#e9e9e9] h-11 p-2 " name="cars" id="cars">
     
@@ -280,7 +279,7 @@ const date=new Date()
             
               <div className="mt-[1.4em]"> 
                <p>Select for multiple Tickets</p>
-                 <div className=" flex justify-between p-5 gap-4 items-center w-full">
+                 <div className=" flex flex-col md:flex-col justify-between p-5 gap-4 items-center w-full">
                 <button className=" bg-orange-900/20 ">
                    <p className=" bg-white/60 p-1 rounded-md  w-full break-words   text-[1.1em] font-bold text ">
                     
@@ -303,22 +302,35 @@ const date=new Date()
                 </button>
                 
                  <div className="flex justify-center items-center gap-6 ">
-                 <button onClick={handleDecrementPrice} className="w-fit h-fit border-b-4  border border-b-black/10 shadow-black font-bold text-[1.3em] text-white">- </button> 
+                  {
+                  currency==="NGN"?
+
+                   <button onClick={()=>handleDecrementPriceN(currency)} className="w-fit h-fit border-b-4  border border-b-black/10 shadow-black font-bold text-[1.3em] text-white">- </button> 
+:
+                  <button onClick={()=>handleDecrementPriceD(currency)} className="w-fit h-fit border-b-4  border border-b-black/10 shadow-black font-bold text-[1.3em] text-white">- </button> 
+                  }
+                
                  <p>
                   
                  {currency==="NGN"?
-                <>
-                  {counterN} Ticket(s) added)
-                </>
+                <p>
+                  {counterN} Ticket(s) added
+                </p>
                 :
                 <>
-                  {counterD} Ticket(s) added)
+                  {counterD} Ticket(s) added
                 </>
               }
                 
                   
                   </p> 
-                  <button onClick={handleIncrementPrice} className="w-fit h-fit border-b-4  border border-b-black/10 shadow-black font-bold text-[1.3em] text-white">+</button>
+                  {
+                    currency==="NGN"?
+                     <button onClick={handleIncrementPriceN} className="w-fit h-fit border-b-4  border border-b-black/10 shadow-black font-bold text-[1.3em] text-white">+</button>
+                     :
+                     <button onClick={handleIncrementPriceD} className="w-fit h-fit border-b-4  border border-b-black/10 shadow-black font-bold text-[1.3em] text-white">+</button>
+                  }
+                 
                 
                  </div>
                
@@ -327,11 +339,11 @@ const date=new Date()
               <p className=" flex justify-end">
                 {currency==="NGN"?
                 <>
-                  {counterN} Ticket(s) added)
+                  {counterN} Ticket(s) added
                 </>
                 :
                 <>
-                  {counterD} Ticket(s) added)
+                  {counterD} Ticket(s) added
                 </>
               }
                 
@@ -348,6 +360,7 @@ const date=new Date()
             {currency==='NGN'?
               <FlutterWaveButton  className='text-white mt-8  w-[90%] mx-auto bg-orange-500 py-3   rounded-lg' {...fwConfigNaira} />
       :
+
         <FlutterWaveButton  className='text-white mt-8  w-[90%] mx-auto bg-orange-500 py-3   rounded-lg' {...fwConfigDollar} />
       
             
