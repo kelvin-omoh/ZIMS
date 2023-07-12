@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
 import { uid } from 'uid';
 import logo from '../assets/logo.png'
-const Modal = ({ visible, onClose,currency }) => {
+const Modal = ({ visible, onClose,currency,setModal }) => {
 
   // const [name, setName] = useState('');
   const [items, setItems] = useState('');
@@ -28,13 +28,26 @@ const Modal = ({ visible, onClose,currency }) => {
 
   useEffect(()=>{
     setCounterN(1)
-    setCounterD(1)
-    
-   },[priceNaira,priceDollar])
+  },[priceNaira])
 
-  // useEffect(()=>{
-  //   setCounterD(1)
-  //  },[priceDollar])
+
+  useEffect(()=>{
+   setPayPriceNaira(3500)
+   setCounterD(1)
+   setCounterN(1)
+   setPayPriceDollar(10)
+  
+  },[currency])
+
+
+  useEffect(()=>{
+    setCounterN(1)
+  },[priceNaira])
+
+
+  useEffect(()=>{
+    setCounterD(1)
+   },[priceDollar])
 
 
 
@@ -144,51 +157,48 @@ const date=new Date()
 
   
   
-  const handleIncrementPrice=()=>{
-    console.log(priceNaira);
-    setPayPriceDollar( payPriceDollar + Number(MainpayPriceDollar))
+  const handleIncrementPriceN=()=>{
+    // console.log(priceNaira);
     setPayPriceNaira(payPriceNaira + Number(MainpayPriceNaira))
-    console.log(payPriceNaira);
-    console.log(Number(priceNaira));
-    console.log(payPriceNaira);
+    // console.log(payPriceNaira);
+    // console.log(Number(priceNaira));
+    // console.log(payPriceNaira);
     setCounterN(counterN+1)
+ 
+    }
+  const handleIncrementPriceD=()=>{
+    setPayPriceDollar( payPriceDollar + Number(MainpayPriceDollar))
     setCounterD(counterD+1)
     }
 
-    const handleDecrementPrice=(currency)=>{
+    const handleDecrementPriceN=(currency)=>{
        //   NORMAL TICKET +++++ NAIRA DECREMNET
-       if(currency==="NGN"){
+      
 
          if(payPriceNaira>MainpayPriceNaira){
       if(counterN>0 ){
         setCounterN(counterN-1)
-    
              setPayPriceNaira((priceNaira)=> priceNaira-(MainpayPriceNaira))
-   
-
-           
             }
      }
-       }
-       else{
+ 
+  }
+
+    const handleDecrementPriceD=(currency)=>{
+      
+     
+    
  //   FOREIGN TICKET +++++ DOLLAR DECREMNET
      if(payPriceDollar>MainpayPriceDollar){
       if(counterD>0 ){
         setCounterD(counterD-1)
     
              setPayPriceDollar((priceDollar)=> priceDollar-(MainpayPriceDollar))
-   
+            }}      
 
-           
-            }
-     }
-
-       }
     
-   
 
-
-     }
+  }
      
     
      
@@ -205,8 +215,17 @@ const date=new Date()
       id="container"
       className="fixed top-[5em] inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center z-[10] "
     >
-      <div className="min-h-[640px] min-w-[500px] bg-white p-5 text-black place-items-center rounded-xl ">
-      <form onSubmit={(e)=>e.preventDefault()}  className='flex flex-col'>
+      <div className=" h-[550px] w-[350px] md:max-h-[640px] md:max-w-[500px]  bg-white p-5 text-black place-items-center rounded-xl ">
+      <form onSubmit={(e)=>e.preventDefault()}  className='flex flex-col h-[460px]  overflow-scroll'>
+        <button 
+        onClick={()=>{
+        setModal(false)
+        console.log(3)
+        }
+        }
+        className=" h-fit w-fit rounded-full px-6 fixed  top-3 right-3
+         font-[500] text-[1.4em] font-mono text-white py-4">x</button>
+
             <label  className='pt-4' >Full Name</label>
             <input value={name} onChange={(e)=>setName(e.target.value)} className='rounded-lg  h-12 bg-[#e9e9e9] p-2' type='text' placeholder="Full Name" name=" your name"></input>
             <label className='pt-4' >Email</label>
@@ -259,7 +278,7 @@ const date=new Date()
             
               <div className="mt-[1.4em]"> 
                <p>Select for multiple Tickets</p>
-                 <div className=" flex justify-between p-5 gap-4 items-center w-full">
+                 <div className=" flex flex-col md:flex-col justify-between p-5 gap-4 items-center w-full">
                 <button className=" bg-orange-900/20 ">
                    <p className=" bg-white/60 p-1 rounded-md  w-full break-words   text-[1.1em] font-bold text ">
                     
@@ -282,22 +301,35 @@ const date=new Date()
                 </button>
                 
                  <div className="flex justify-center items-center gap-6 ">
-                 <button onClick={()=>handleDecrementPrice(currency)} className="w-fit h-fit border-b-4  border border-b-black/10 shadow-black font-bold text-[1.3em] text-white">- </button> 
+                  {
+                  currency==="NGN"?
+
+                   <button onClick={()=>handleDecrementPriceN(currency)} className="w-fit h-fit border-b-4  border border-b-black/10 shadow-black font-bold text-[1.3em] text-white">- </button> 
+:
+                  <button onClick={()=>handleDecrementPriceD(currency)} className="w-fit h-fit border-b-4  border border-b-black/10 shadow-black font-bold text-[1.3em] text-white">- </button> 
+                  }
+                
                  <p>
                   
                  {currency==="NGN"?
                 <>
-                  {counterN} Ticket(s) added)
+                  {counterN} Ticket(s) added
                 </>
                 :
                 <>
-                  {counterD} Ticket(s) added)
+                  {counterD} Ticket(s) added
                 </>
               }
                 
                   
                   </p> 
-                  <button onClick={handleIncrementPrice} className="w-fit h-fit border-b-4  border border-b-black/10 shadow-black font-bold text-[1.3em] text-white">+</button>
+                  {
+                    currency==="NGN"?
+                     <button onClick={handleIncrementPriceN} className="w-fit h-fit border-b-4  border border-b-black/10 shadow-black font-bold text-[1.3em] text-white">+</button>
+                     :
+                     <button onClick={handleIncrementPriceD} className="w-fit h-fit border-b-4  border border-b-black/10 shadow-black font-bold text-[1.3em] text-white">+</button>
+                  }
+                 
                 
                  </div>
                
@@ -306,11 +338,11 @@ const date=new Date()
               <p className=" flex justify-end">
                 {currency==="NGN"?
                 <>
-                  {counterN} Ticket(s) added)
+                  {counterN} Ticket(s) added
                 </>
                 :
                 <>
-                  {counterD} Ticket(s) added)
+                  {counterD} Ticket(s) added
                 </>
               }
                 
