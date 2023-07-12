@@ -28,6 +28,7 @@ const Modal = ({ visible, onClose,currency,setModal }) => {
 
   useEffect(()=>{
     setCounterN(1)
+    console.log('1');
   },[priceNaira])
 
 
