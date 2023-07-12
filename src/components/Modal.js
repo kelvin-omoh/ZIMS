@@ -220,7 +220,7 @@ const date=new Date()
         <button 
         onClick={()=>{
         setModal(false)
-        console.log(3)
+        // console.log(3)
         }
         }
         className=" h-fit w-fit rounded-full px-6 fixed  top-3 right-3
