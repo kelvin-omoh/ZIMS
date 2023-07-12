@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
 import { uid } from 'uid';
 import logo from '../assets/logo.png'
@@ -25,6 +25,32 @@ const Modal = ({ visible, onClose,currency,setModal }) => {
   const [name,setName]=useState('')
   const[email,setEmail]=useState('')
   const[phoneNumber,setPhonenumber]=useState('')
+
+  useEffect(()=>{
+    setCounterN(1)
+  },[priceNaira])
+
+
+  useEffect(()=>{
+   setPayPriceNaira(3500)
+   setCounterD(1)
+   setCounterN(1)
+   setPayPriceDollar(10)
+  
+  },[currency])
+
+
+  useEffect(()=>{
+    setCounterN(1)
+  },[priceNaira])
+
+
+  useEffect(()=>{
+    setCounterD(1)
+   },[priceDollar])
+
+
+
   const handleOnClose = (e) => {
     if (e.target.id === "container") onClose();
   };
