@@ -191,8 +191,18 @@ const date=new Date()
       id="container"
       className="fixed top-[5em] inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center z-[10] "
     >
-      <div className="min-h-[640px] min-w-[500px] bg-white p-5 text-black place-items-center rounded-xl ">
-      <form onSubmit={(e)=>e.preventDefault()}  className='flex flex-col'>
+
+      <div className=" h-[550px] w-[350px] md:max-h-[640px] md:max-w-[500px]  bg-white p-5 text-black place-items-center rounded-xl ">
+      <form onSubmit={(e)=>e.preventDefault()}  className='flex flex-col h-[460px]  overflow-scroll'>
+        <button 
+        onClick={()=>{
+        setModal(false)
+        // console.log(3)
+        }
+        }
+        className=" h-fit w-fit rounded-full px-6 fixed  top-3 right-3
+         font-[500] text-[1.4em] font-mono text-white py-4">x</button>
+
             <label  className='pt-4' >Full Name</label>
             <input value={name} onChange={(e)=>setName(e.target.value)} className='rounded-lg  h-12 bg-[#e9e9e9] p-2' type='text' placeholder="Full Name" name=" your name"></input>
             <label className='pt-4' >Email</label>
